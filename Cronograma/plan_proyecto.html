@@ -1,0 +1,3164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:date="http://exslt.org/dates-and-times">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--
+              This file is generated from xml source: DO NOT EDIT
+      -->
+    <title>SIGETI - Planner</title>
+    <meta name="GENERATOR" content="Planner HTML output" />
+    <style type="text/css">
+
+/* CSS Stylesheet for Planner HTML output.
+ * 
+ * Copyright (C) 2004-2005 Imendio AB
+ * Copyright (C) 2003 CodeFactory AB
+ * Copyright (C) 2003 Daniel Lundin (daniel@edgewall.com)
+ * Copyright (C) 2004 Chris Ladd (caladd@particlestorm.net)
+ */
+
+/*
+ * Fonts 
+ */
+html,body,table { 
+ font-family: "Bitstream Vera Sans", helvetica, Arial, sans-serif;
+ font-size: 12px;
+ white-space: nowrap;
+}
+
+tr,td,th,table,font,span,div,h1,h2,h3 {
+ font-family: "Bitstream Vera Sans", helvetica, Arial, sans-serif;
+}
+
+h1 {
+ font-size: 16px;
+}
+
+h2 {
+ font-size: 12px;
+ margin-bottom: 2px;
+}
+
+div.separator {
+ margin: 1em;
+}
+
+/*
+ * Header
+ */
+table.proj-header {
+ border: 0;
+ margin: 0;
+ width: auto;
+}
+
+table.proj-header .header {
+ font-weight: bold;
+}
+
+/*
+ * Footer
+ */
+.footer {
+ float: left;
+ width: 100%;
+ margin-top: 50px;  
+ padding-top: 2px;
+ border-style: dotted;
+ border-width: 1px 0 0 0;
+ border-color: #999;
+ font-size: 9px;
+ text-align: right;
+ clear: both;
+ color: #666;
+}
+
+a:link, a:visited {
+ text-decoration: none;
+ color: #666;
+}
+
+a:hover[href] {
+ text-decoration: underline;
+}
+
+
+/*
+ * Layout
+ */
+
+.gantt, .gantt-tasklist, .gantt-chart, .tasklist, .resourcelist {
+ float: left;
+}
+
+.gantt-tasklist, .gantt-chart, .tasklist-table, .resourcelist-table {
+ border-style: solid;
+ border-width: 1px;
+ border-color: #aaa;
+}
+
+.gantt-tasklist, .gantt-chart, .tasklist, .resourcelist {
+ overflow: auto;
+}
+
+.gantt, .tasklist, .resourcelist {
+  clear: both;
+  width: 100%;
+}
+
+.gantt-tasklist {
+ border-width: 1px 0px 1px 1px;
+ width: 30%;
+}
+
+.gantt-chart {
+ border-color: #aaa #aaa #aaa #fff;
+ width: 69.5%;
+}
+
+.tasklist, .resourcelist {
+ clear: left;
+}
+
+table {
+ width: 100%;
+ border-collapse: collapse;
+ border-style: none;
+ border-color: #fff;
+ white-space: nowrap;
+ margin: 0;
+}
+
+tr, td, th {
+ white-space: nowrap;
+ vertical-align: top;
+ padding-top: 1px;
+ padding-bottom: 1px;
+}
+
+th {
+ vertical-align: top;
+}
+
+tr {
+ height: 1.5em;
+}
+
+tr.header {
+ background-color: #aaa;
+ color: #fff;
+}
+
+tr.even {
+ background-color: #eee;
+}
+
+tr.odd {
+ background-color: #fff;
+}
+
+th span, td span {
+ margin-left: 6px;
+ margin-right: 6px;
+}
+
+th.note {
+ min-width: 20em;
+}
+
+td.note {
+ white-space: normal;
+}
+
+/*
+ * Gantt
+ */
+div.gantt-empty-begin, div.gantt-empty-end, div.gantt-complete-done, div.gantt-complete-notdone, div.gantt-summary {
+ overflow: hidden;
+ clear: none;
+ float: left; 
+ height: 0.75em;
+ margin-top: 0.15em;
+ margin-bottom: 0;
+}
+
+div.gantt-complete-done {
+ background-color: #495f6b;
+ height: 0.75em;
+ margin-top: 0;
+ margin-bottom: 0;
+}
+
+div.gantt-complete-notdone {
+ background-color: #8db6cd;
+ border-style: solid;
+ border-width: 1px;
+}
+
+div.gantt-summary {
+ height: 0.3em;
+ margin-top: 0.25em;
+ border-bottom: 2px dashed #000;
+}
+
+div.gantt-empty-end {
+ margin-left: 0;
+}
+
+div.gantt-milestone {
+ float: left;
+ font-size: 0.9em;
+ color: #000000;
+ position: relative;
+ margin-left: 0;
+ margin-right: 0;
+}
+
+div.gantt-resources {
+ float: left;
+ margin-left: 0.5em;
+ white-space: nowrap;
+}
+
+th.gantt-1day-header {
+  width: 19px;
+}
+
+th.gantt-2day-header {
+  width: 39px;
+}
+
+th.gantt-3day-header {
+  width: 59px;
+}
+
+th.gantt-4day-header {
+  width: 79px;
+}
+
+th.gantt-5day-header {
+  width: 99px;
+}
+
+th.gantt-6day-header {
+  width: 119px;
+}
+
+th.gantt-week-header, .gantt-resources {
+ width: 139px;
+}
+
+th.gantt-day-header {
+ margin: 0;
+ padding-top: 1px;
+ padding-bottom: 1px;
+ width: 19px;
+}
+
+</style>
+<!--[if IE]><style type="text/css">
+
+/* IE specific overrides to compensate for the different box model used by IE
+ * (see http://en.wikipedia.org/wiki/Internet_Explorer_box_model_bug)
+ */
+
+.gantt-resources {
+  overflow: hidden;
+}
+
+
+.tasklist, .resourcelist {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 1em;
+}
+
+
+.gantt-tasklist, .gantt-chart {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+
+.gantt-chart {
+  padding-bottom: 1px;
+}
+
+
+
+.tasklist-table, .resourcelist-table {
+  width: 99.8%;
+}
+
+/*
+div.gantt-empty-begin, div.gantt-empty-end, div.gantt-complete-done, div.gantt-complete-notdone, div.gantt-summary {
+ height: 1.75em;
+}
+
+div.gantt-complete-done {
+ height: 0.75em;
+}
+
+div.gantt-summary {
+ height: 0.3em;
+}
+*/
+th.gantt-1day-header {
+  width: 20px;
+}
+
+th.gantt-2day-header {
+  width: 40px;
+}
+
+th.gantt-3day-header {
+  width: 60px;
+}
+
+th.gantt-4day-header {
+  width: 80px;
+}
+
+th.gantt-5day-header {
+  width: 100px;
+}
+
+th.gantt-6day-header {
+  width: 120px;
+}
+
+th.gantt-week-header {
+ width: 140px;
+}
+
+th.gantt-day-header {
+ width: 20px;
+}
+
+</style><![endif]-->
+<!--[if gte IE 7]><style type="text/css">
+
+.gantt-chart {
+  padding-bottom: 0px;
+}
+
+</style><![endif]-->
+  </head>
+  <body>
+    <h1 class="proj-title">
+      <a name="project" id="project">SIGETI</a>
+    </h1>
+    <table class="proj-header">
+      <tr>
+        <td class="header">Empresa:</td>
+        <td>Univalle</td>
+      </tr>
+      <tr>
+        <td class="header">Inicio:</td>
+        <td>7 septiembre, 2011</td>
+      </tr>
+      <tr>
+        <td class="header">Fin:</td>
+        <td>8 diciembre, 2011</td>
+      </tr>
+      <tr>
+        <td class="header">Fase:</td>
+        <td>Elaboración</td>
+      </tr>
+      <tr>
+        <td class="header">Fecha de informe:</td>
+        <td>30 septiembre, 2011</td>
+      </tr>
+    </table>
+    <div class="separator"></div>
+    <div class="gantt">
+      <h2>
+        <a name="gantt" id="gantt">Gráfica Gantt</a>
+      </h2>
+      <div class="gantt-tasklist">
+        <table cellspacing="0" cellpadding="0" border="1">
+          <tr class="header" align="left">
+            <th>
+              <span>WBS</span>
+            </th>
+            <th>
+              <span>Nombre</span>
+            </th>
+            <th>
+              <span>Trabajo</span>
+            </th>
+          </tr>
+          <tr class="header">
+            <th> </th>
+            <th> </th>
+            <th> </th>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>1</span>
+            </td>
+            <td>
+              <a name="task-1" style="white-space: nowrap; font-weight: bold; margin-left: 0px;" id="task-1">
+                <span>Inicio</span>
+              </a>
+            </td>
+            <td>
+              <span style="white-space: nowrap; font-weight: bold;">1d 5h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>1.1</span>
+            </td>
+            <td>
+              <a name="task-2" style="white-space: nowrap; font-weight: bold; margin-left: 18px;" id="task-2">
+                <span>Análisis de requerimientos</span>
+              </a>
+            </td>
+            <td>
+              <span style="white-space: nowrap; font-weight: bold;">6h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>1.1.1</span>
+            </td>
+            <td>
+              <a name="gantt-3" style="white-space: nowrap; margin-left: 36px;" id="gantt-3">
+                <span>Requerimientos funcionales</span>
+              </a>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>1.1.2</span>
+            </td>
+            <td>
+              <a name="gantt-4" style="white-space: nowrap; margin-left: 36px;" id="gantt-4">
+                <span>Requerimientos no funcionales</span>
+              </a>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>1.2</span>
+            </td>
+            <td>
+              <a name="task-5" style="white-space: nowrap; font-weight: bold; margin-left: 18px;" id="task-5">
+                <span>Validación de requerimientos</span>
+              </a>
+            </td>
+            <td>
+              <span style="white-space: nowrap; font-weight: bold;">7h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>1.2.1</span>
+            </td>
+            <td>
+              <a name="gantt-6" style="white-space: nowrap; margin-left: 36px;" id="gantt-6">
+                <span>Lista de chequeo requerimientos funcionales</span>
+              </a>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>1.2.2</span>
+            </td>
+            <td>
+              <a name="gantt-7" style="white-space: nowrap; margin-left: 36px;" id="gantt-7">
+                <span>Lista de chequeo requerimientos no funcionales</span>
+              </a>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>1.2.3</span>
+            </td>
+            <td>
+              <a name="gantt-8" style="white-space: nowrap; margin-left: 36px;" id="gantt-8">
+                <span>Matriz de chequeo</span>
+              </a>
+            </td>
+            <td>
+              <span>1h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2</span>
+            </td>
+            <td>
+              <a name="task-9" style="white-space: nowrap; font-weight: bold; margin-left: 0px;" id="task-9">
+                <span>Elaboración</span>
+              </a>
+            </td>
+            <td>
+              <span style="white-space: nowrap; font-weight: bold;">7d 3h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.1</span>
+            </td>
+            <td>
+              <a name="gantt-10" style="white-space: nowrap; margin-left: 18px;" id="gantt-10">
+                <span>Documento SRS</span>
+              </a>
+            </td>
+            <td>
+              <span>6h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.2</span>
+            </td>
+            <td>
+              <a name="gantt-11" style="white-space: nowrap; margin-left: 18px;" id="gantt-11">
+                <span>Iteración fase inicio, corrección requerimientos funcionales</span>
+              </a>
+            </td>
+            <td>
+              <span>2h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.3</span>
+            </td>
+            <td>
+              <a name="task-12" style="white-space: nowrap; font-weight: bold; margin-left: 18px;" id="task-12">
+                <span>Análisis y elaboración de casos de uso</span>
+              </a>
+            </td>
+            <td>
+              <span style="white-space: nowrap; font-weight: bold;">1d 1h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.3.1</span>
+            </td>
+            <td>
+              <a name="gantt-13" style="white-space: nowrap; margin-left: 36px;" id="gantt-13">
+                <span>Diagrama de casos de uso</span>
+              </a>
+            </td>
+            <td>
+              <span>6h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.3.2</span>
+            </td>
+            <td>
+              <a name="gantt-14" style="white-space: nowrap; margin-left: 36px;" id="gantt-14">
+                <span>Casos de uso expandidos</span>
+              </a>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.4</span>
+            </td>
+            <td>
+              <a name="task-15" style="white-space: nowrap; font-weight: bold; margin-left: 18px;" id="task-15">
+                <span>Modelo de datos</span>
+              </a>
+            </td>
+            <td>
+              <span style="white-space: nowrap; font-weight: bold;">1d 2h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.4.1</span>
+            </td>
+            <td>
+              <a name="gantt-16" style="white-space: nowrap; margin-left: 36px;" id="gantt-16">
+                <span>Diagrama E-R</span>
+              </a>
+            </td>
+            <td>
+              <span>7h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.4.2</span>
+            </td>
+            <td>
+              <a name="gantt-17" style="white-space: nowrap; margin-left: 36px;" id="gantt-17">
+                <span>Diagrama UML</span>
+              </a>
+            </td>
+            <td>
+              <span>1h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.4.3</span>
+            </td>
+            <td>
+              <a name="gantt-18" style="white-space: nowrap; margin-left: 36px;" id="gantt-18">
+                <span>Script SQL</span>
+              </a>
+            </td>
+            <td>
+              <span>1h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.5</span>
+            </td>
+            <td>
+              <a name="gantt-19" style="white-space: nowrap; margin-left: 18px;" id="gantt-19">
+                <span>Modelo arquitectural</span>
+              </a>
+            </td>
+            <td>
+              <span>6h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.6</span>
+            </td>
+            <td>
+              <a name="task-20" style="white-space: nowrap; font-weight: bold; margin-left: 18px;" id="task-20">
+                <span>Plan de proyecto</span>
+              </a>
+            </td>
+            <td>
+              <span style="white-space: nowrap; font-weight: bold;">1d 3h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.6.1</span>
+            </td>
+            <td>
+              <a name="gantt-21" style="white-space: nowrap; margin-left: 36px;" id="gantt-21">
+                <span>Calendarización con responsables</span>
+              </a>
+            </td>
+            <td>
+              <span>6h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.6.2</span>
+            </td>
+            <td>
+              <a name="gantt-22" style="white-space: nowrap; margin-left: 36px;" id="gantt-22">
+                <span>Matriz funcional</span>
+              </a>
+            </td>
+            <td>
+              <span>1h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.6.3</span>
+            </td>
+            <td>
+              <a name="gantt-23" style="white-space: nowrap; margin-left: 36px;" id="gantt-23">
+                <span>Diagrama de gantt</span>
+              </a>
+            </td>
+            <td>
+              <span>1h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.6.4</span>
+            </td>
+            <td>
+              <a name="gantt-24" style="white-space: nowrap; margin-left: 36px;" id="gantt-24">
+                <span>Riesgos y acciones de contigencia.</span>
+              </a>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.7</span>
+            </td>
+            <td>
+              <a name="task-25" style="white-space: nowrap; font-weight: bold; margin-left: 18px;" id="task-25">
+                <span>Diseño</span>
+              </a>
+            </td>
+            <td>
+              <span style="white-space: nowrap; font-weight: bold;">1d 7h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.7.1</span>
+            </td>
+            <td>
+              <a name="gantt-26" style="white-space: nowrap; margin-left: 36px;" id="gantt-26">
+                <span>Diagrama de paquetes</span>
+              </a>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.7.2</span>
+            </td>
+            <td>
+              <a name="gantt-27" style="white-space: nowrap; margin-left: 36px;" id="gantt-27">
+                <span>Diagrama de clases</span>
+              </a>
+            </td>
+            <td>
+              <span>7h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.7.3</span>
+            </td>
+            <td>
+              <a name="gantt-28" style="white-space: nowrap; margin-left: 36px;" id="gantt-28">
+                <span>Bocetos de interfaz</span>
+              </a>
+            </td>
+            <td>
+              <span>4h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>3</span>
+            </td>
+            <td>
+              <a name="task-29" style="white-space: nowrap; font-weight: bold; margin-left: 0px;" id="task-29">
+                <span>Capacitación</span>
+              </a>
+            </td>
+            <td>
+              <span style="white-space: nowrap; font-weight: bold;">1d 7h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>3.1</span>
+            </td>
+            <td>
+              <a name="gantt-30" style="white-space: nowrap; margin-left: 18px;" id="gantt-30">
+                <span>JSF</span>
+              </a>
+            </td>
+            <td>
+              <span>1d 7h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>4</span>
+            </td>
+            <td>
+              <a name="task-31" style="white-space: nowrap; font-weight: bold; margin-left: 0px;" id="task-31">
+                <span>Implementación</span>
+              </a>
+            </td>
+            <td>
+              <span style="white-space: nowrap; font-weight: bold;">21d 3h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>4.1</span>
+            </td>
+            <td>
+              <a name="gantt-32" style="white-space: nowrap; margin-left: 18px;" id="gantt-32">
+                <span>Gestión de usuarios</span>
+              </a>
+            </td>
+            <td>
+              <span>2d 6h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>4.2</span>
+            </td>
+            <td>
+              <a name="gantt-33" style="white-space: nowrap; margin-left: 18px;" id="gantt-33">
+                <span>Gestión de tarjetas</span>
+              </a>
+            </td>
+            <td>
+              <span>2d 6h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>4.3</span>
+            </td>
+            <td>
+              <a name="gantt-34" style="white-space: nowrap; margin-left: 18px;" id="gantt-34">
+                <span>Gestión de buses</span>
+              </a>
+            </td>
+            <td>
+              <span>2d 6h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>4.4</span>
+            </td>
+            <td>
+              <a name="gantt-35" style="white-space: nowrap; margin-left: 18px;" id="gantt-35">
+                <span>Gestión de estaciones</span>
+              </a>
+            </td>
+            <td>
+              <span>2d 6h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>4.5</span>
+            </td>
+            <td>
+              <a name="gantt-36" style="white-space: nowrap; margin-left: 18px;" id="gantt-36">
+                <span>Gestión de rutas</span>
+              </a>
+            </td>
+            <td>
+              <span>1d 4h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>4.6</span>
+            </td>
+            <td>
+              <a name="gantt-37" style="white-space: nowrap; margin-left: 18px;" id="gantt-37">
+                <span>Reportes</span>
+              </a>
+            </td>
+            <td>
+              <span>1d 1h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>4.7</span>
+            </td>
+            <td>
+              <a name="gantt-38" style="white-space: nowrap; margin-left: 18px;" id="gantt-38">
+                <span>Pruebas funcionales</span>
+              </a>
+            </td>
+            <td>
+              <span>4h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>4.8</span>
+            </td>
+            <td>
+              <a name="gantt-39" style="white-space: nowrap; margin-left: 18px;" id="gantt-39">
+                <span>Integración</span>
+              </a>
+            </td>
+            <td>
+              <span>5d 5h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>4.9</span>
+            </td>
+            <td>
+              <a name="gantt-40" style="white-space: nowrap; margin-left: 18px;" id="gantt-40">
+                <span>Pruebas de integración</span>
+              </a>
+            </td>
+            <td>
+              <span>6h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>4.10</span>
+            </td>
+            <td>
+              <a name="gantt-41" style="white-space: nowrap; margin-left: 18px;" id="gantt-41">
+                <span>Pruebas de usabilidad</span>
+              </a>
+            </td>
+            <td>
+              <span>4h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>5</span>
+            </td>
+            <td>
+              <a name="task-42" style="white-space: nowrap; font-weight: bold; margin-left: 0px;" id="task-42">
+                <span>Transición</span>
+              </a>
+            </td>
+            <td>
+              <span style="white-space: nowrap; font-weight: bold;">23d 3h </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>5.1</span>
+            </td>
+            <td>
+              <a name="gantt-43" style="white-space: nowrap; margin-left: 18px;" id="gantt-43">
+                <span>Entrega 1 documentación</span>
+              </a>
+            </td>
+            <td>
+              <span>20d 3h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>5.2</span>
+            </td>
+            <td>
+              <a name="gantt-44" style="white-space: nowrap; margin-left: 18px;" id="gantt-44">
+                <span>Entrega 2 manules de usuario</span>
+              </a>
+            </td>
+            <td>
+              <span>1d </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>5.3</span>
+            </td>
+            <td>
+              <a name="gantt-45" style="white-space: nowrap; margin-left: 18px;" id="gantt-45">
+                <span>Entrega 3 capacitación</span>
+              </a>
+            </td>
+            <td>
+              <span>1d 7h </span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>5.4</span>
+            </td>
+            <td>
+              <a name="gantt-46" style="white-space: nowrap; margin-left: 18px;" id="gantt-46">
+                <span>Entrega 4 aplicación completa</span>
+              </a>
+            </td>
+            <td>
+              <span>1h </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="gantt-chart">
+        <table cellspacing="0" cellpadding="0" border="1" style="table-layout: fixed;">
+          <tr class="header" align="left">
+            <th class="gantt-4day-header" colspan="4"></th>
+            <th class="gantt-week-header" align="center" colspan="7">Semana 37, 2011</th>
+            <th class="gantt-week-header" align="center" colspan="7">Semana 38, 2011</th>
+            <th class="gantt-week-header" align="center" colspan="7">Semana 39, 2011</th>
+            <th class="gantt-week-header" align="center" colspan="7">Semana 40, 2011</th>
+            <th class="gantt-week-header" align="center" colspan="7">Semana 41, 2011</th>
+            <th class="gantt-week-header" align="center" colspan="7">Semana 42, 2011</th>
+            <th class="gantt-week-header" align="center" colspan="7">Semana 43, 2011</th>
+            <th class="gantt-week-header" align="center" colspan="7">Semana 44, 2011</th>
+            <th class="gantt-week-header" align="center" colspan="7">Semana 45, 2011</th>
+            <th class="gantt-week-header" align="center" colspan="7">Semana 46, 2011</th>
+            <th class="gantt-week-header" align="center" colspan="7">Semana 47, 2011</th>
+            <th class="gantt-week-header" align="center" colspan="7">Semana 48, 2011</th>
+            <th class="gantt-week-header" align="center" colspan="7">Semana 49, 2011</th>
+            <th class="gantt-4day-header" colspan="4"></th>
+            <th></th>
+          </tr>
+          <tr class="header" align="left">
+            <th class="gantt-day-header" align="center">8</th>
+            <th class="gantt-day-header" align="center">9</th>
+            <th class="gantt-day-header" align="center">10</th>
+            <th class="gantt-day-header" align="center">11</th>
+            <th class="gantt-day-header" align="center">12</th>
+            <th class="gantt-day-header" align="center">13</th>
+            <th class="gantt-day-header" align="center">14</th>
+            <th class="gantt-day-header" align="center">15</th>
+            <th class="gantt-day-header" align="center">16</th>
+            <th class="gantt-day-header" align="center">17</th>
+            <th class="gantt-day-header" align="center">18</th>
+            <th class="gantt-day-header" align="center">19</th>
+            <th class="gantt-day-header" align="center">20</th>
+            <th class="gantt-day-header" align="center">21</th>
+            <th class="gantt-day-header" align="center">22</th>
+            <th class="gantt-day-header" align="center">23</th>
+            <th class="gantt-day-header" align="center">24</th>
+            <th class="gantt-day-header" align="center">25</th>
+            <th class="gantt-day-header" align="center">26</th>
+            <th class="gantt-day-header" align="center">27</th>
+            <th class="gantt-day-header" align="center">28</th>
+            <th class="gantt-day-header" align="center">29</th>
+            <th class="gantt-day-header" align="center">30</th>
+            <th class="gantt-day-header" align="center">1</th>
+            <th class="gantt-day-header" align="center">2</th>
+            <th class="gantt-day-header" align="center">3</th>
+            <th class="gantt-day-header" align="center">4</th>
+            <th class="gantt-day-header" align="center">5</th>
+            <th class="gantt-day-header" align="center">6</th>
+            <th class="gantt-day-header" align="center">7</th>
+            <th class="gantt-day-header" align="center">8</th>
+            <th class="gantt-day-header" align="center">9</th>
+            <th class="gantt-day-header" align="center">10</th>
+            <th class="gantt-day-header" align="center">11</th>
+            <th class="gantt-day-header" align="center">12</th>
+            <th class="gantt-day-header" align="center">13</th>
+            <th class="gantt-day-header" align="center">14</th>
+            <th class="gantt-day-header" align="center">15</th>
+            <th class="gantt-day-header" align="center">16</th>
+            <th class="gantt-day-header" align="center">17</th>
+            <th class="gantt-day-header" align="center">18</th>
+            <th class="gantt-day-header" align="center">19</th>
+            <th class="gantt-day-header" align="center">20</th>
+            <th class="gantt-day-header" align="center">21</th>
+            <th class="gantt-day-header" align="center">22</th>
+            <th class="gantt-day-header" align="center">23</th>
+            <th class="gantt-day-header" align="center">24</th>
+            <th class="gantt-day-header" align="center">25</th>
+            <th class="gantt-day-header" align="center">26</th>
+            <th class="gantt-day-header" align="center">27</th>
+            <th class="gantt-day-header" align="center">28</th>
+            <th class="gantt-day-header" align="center">29</th>
+            <th class="gantt-day-header" align="center">30</th>
+            <th class="gantt-day-header" align="center">31</th>
+            <th class="gantt-day-header" align="center">1</th>
+            <th class="gantt-day-header" align="center">2</th>
+            <th class="gantt-day-header" align="center">3</th>
+            <th class="gantt-day-header" align="center">4</th>
+            <th class="gantt-day-header" align="center">5</th>
+            <th class="gantt-day-header" align="center">6</th>
+            <th class="gantt-day-header" align="center">7</th>
+            <th class="gantt-day-header" align="center">8</th>
+            <th class="gantt-day-header" align="center">9</th>
+            <th class="gantt-day-header" align="center">10</th>
+            <th class="gantt-day-header" align="center">11</th>
+            <th class="gantt-day-header" align="center">12</th>
+            <th class="gantt-day-header" align="center">13</th>
+            <th class="gantt-day-header" align="center">14</th>
+            <th class="gantt-day-header" align="center">15</th>
+            <th class="gantt-day-header" align="center">16</th>
+            <th class="gantt-day-header" align="center">17</th>
+            <th class="gantt-day-header" align="center">18</th>
+            <th class="gantt-day-header" align="center">19</th>
+            <th class="gantt-day-header" align="center">20</th>
+            <th class="gantt-day-header" align="center">21</th>
+            <th class="gantt-day-header" align="center">22</th>
+            <th class="gantt-day-header" align="center">23</th>
+            <th class="gantt-day-header" align="center">24</th>
+            <th class="gantt-day-header" align="center">25</th>
+            <th class="gantt-day-header" align="center">26</th>
+            <th class="gantt-day-header" align="center">27</th>
+            <th class="gantt-day-header" align="center">28</th>
+            <th class="gantt-day-header" align="center">29</th>
+            <th class="gantt-day-header" align="center">30</th>
+            <th class="gantt-day-header" align="center">1</th>
+            <th class="gantt-day-header" align="center">2</th>
+            <th class="gantt-day-header" align="center">3</th>
+            <th class="gantt-day-header" align="center">4</th>
+            <th class="gantt-day-header" align="center">5</th>
+            <th class="gantt-day-header" align="center">6</th>
+            <th class="gantt-day-header" align="center">7</th>
+            <th class="gantt-day-header" align="center">8</th>
+            <th class="gantt-day-header" align="center">9</th>
+            <th class="gantt-day-header" align="center">10</th>
+            <th class="gantt-day-header" align="center">11</th>
+            <th class="gantt-day-header" align="center">12</th>
+            <th class="gantt-day-header" align="center">13</th>
+            <th class="gantt-day-header" align="center">14</th>
+            <th class="gantt-day-header" align="center">15</th>
+            <th align="center"></th>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;"></div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;"></div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 16px;"></div>
+                <div class="gantt-complete-notdone" style="width: 1px;">
+                  <div class="gantt-complete-done" style="width: 1px;"></div>
+                </div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 16px;"></div>
+                <div class="gantt-complete-notdone" style="width: 21px;">
+                  <div class="gantt-complete-done" style="width: 21px;"></div>
+                </div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Yerminson, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;"></div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 48px;"></div>
+                <div class="gantt-complete-notdone" style="width: 1px;">
+                  <div class="gantt-complete-done" style="width: 1px;"></div>
+                </div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 48px;"></div>
+                <div class="gantt-complete-notdone" style="width: 21px;">
+                  <div class="gantt-complete-done" style="width: 21px;"></div>
+                </div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Yerminson, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 68px;"></div>
+                <div class="gantt-complete-notdone" style="width: 1px;">
+                  <div class="gantt-complete-done" style="width: 1px;"></div>
+                </div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;"></div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 96px;"></div>
+                <div class="gantt-complete-notdone" style="width: 61px;">
+                  <div class="gantt-complete-done" style="width: 61px;"></div>
+                </div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Edgar</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 316px;"></div>
+                <div class="gantt-complete-notdone" style="width: 12px;">
+                  <div class="gantt-complete-done" style="width: 9px;"></div>
+                </div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Edgar</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;"></div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 156px;"></div>
+                <div class="gantt-complete-notdone" style="width: 34px;">
+                  <div class="gantt-complete-done" style="width: 34px;"></div>
+                </div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 256px;"></div>
+                <div class="gantt-complete-notdone" style="width: 20px;">
+                  <div class="gantt-complete-done" style="width: 20px;"></div>
+                </div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;"></div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 468px;"></div>
+                <div class="gantt-complete-notdone" style="width: 49px;">
+                  <div class="gantt-complete-done" style="width: 24px;"></div>
+                </div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 516px;"></div>
+                <div class="gantt-complete-notdone" style="width: 1px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Yerminson, Edgar</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 536px;"></div>
+                <div class="gantt-complete-notdone" style="width: 1px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Felipe</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 596px;"></div>
+                <div class="gantt-complete-notdone" style="width: 33px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Edgar, Felipe</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;"></div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 416px;"></div>
+                <div class="gantt-complete-notdone" style="width: 52px;">
+                  <div class="gantt-complete-done" style="width: 26px;"></div>
+                </div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Edgar, Felipe</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 468px;"></div>
+                <div class="gantt-complete-notdone" style="width: 1px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources"></div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 468px;"></div>
+                <div class="gantt-complete-notdone" style="width: 1px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources"></div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 416px;"></div>
+                <div class="gantt-complete-notdone" style="width: 21px;">
+                  <div class="gantt-complete-done" style="width: 21px;"></div>
+                </div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;"></div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 628px;"></div>
+                <div class="gantt-complete-notdone" style="width: 2px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Yerminson, Felipe</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 676px;"></div>
+                <div class="gantt-complete-notdone" style="width: 21px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 796px;"></div>
+                <div class="gantt-complete-notdone" style="width: 41px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Edgar, Felipe</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;"></div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 796px;"></div>
+                <div class="gantt-complete-notdone" style="width: 141px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;"></div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 856px;"></div>
+                <div class="gantt-complete-notdone" style="width: 194px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 996px;"></div>
+                <div class="gantt-complete-notdone" style="width: 194px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 1276px;"></div>
+                <div class="gantt-complete-notdone" style="width: 194px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 1276px;"></div>
+                <div class="gantt-complete-notdone" style="width: 194px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 1416px;"></div>
+                <div class="gantt-complete-notdone" style="width: 101px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 1556px;"></div>
+                <div class="gantt-complete-notdone" style="width: 54px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 1556px;"></div>
+                <div class="gantt-complete-notdone" style="width: 33px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 1136px;"></div>
+                <div class="gantt-complete-notdone" style="width: 453px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources"></div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 1608px;"></div>
+                <div class="gantt-complete-notdone" style="width: 49px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 1656px;"></div>
+                <div class="gantt-complete-notdone" style="width: 41px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;"></div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 16px;"></div>
+                <div class="gantt-complete-notdone" style="width: 1681px;">
+                  <div class="gantt-complete-done" style="width: 840px;"></div>
+                </div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources"></div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 1588px;"></div>
+                <div class="gantt-complete-notdone" style="width: 69px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Yerminson, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 1696px;"></div>
+                <div class="gantt-complete-notdone" style="width: 141px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td colspan="100">
+              <div style="width: 1981px; white-space: nowrap;">
+                <div class="gantt-empty-begin" style="width: 1836px;"></div>
+                <div class="gantt-complete-notdone" style="width: 1px;"></div>
+                <div class="gantt-empty-end"></div>
+                <div class="gantt-resources">Andrea, Yerminson, Edgar, Felipe, Cristian</div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div class="tasklist">
+      <h2>
+        <a name="tasks" id="tasks">Tareas</a>
+      </h2>
+      <div class="tasklist-table">
+        <table cellspacing="0" cellpadding="0" border="1">
+          <tr class="header" align="left">
+            <th>
+              <span>WBS</span>
+            </th>
+            <th>
+              <span>Nombre</span>
+            </th>
+            <th>
+              <span>Inicio</span>
+            </th>
+            <th>
+              <span>Fin</span>
+            </th>
+            <th>
+              <span>Trabajo</span>
+            </th>
+            <th>
+              <span>Prioridad</span>
+            </th>
+            <th>
+              <span>Terminado</span>
+            </th>
+            <th>
+              <span>Coste</span>
+            </th>
+            <th class="note">
+              <span>Notes</span>
+            </th>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>1</span>
+            </td>
+            <td>
+              <a name="task1" style="font-weight: bold; margin-left: 0px" id="task1">
+                <span>Inicio</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 8</span>
+            </td>
+            <td>
+              <span>Sep 11</span>
+            </td>
+            <td>
+              <span>1d 5h </span>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <span></span>
+            </td>
+            <td class="note">
+              <span></span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>1.1</span>
+            </td>
+            <td>
+              <a name="task2" style="font-weight: bold; margin-left: 18px" id="task2">
+                <span>Análisis de requerimientos</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 8</span>
+            </td>
+            <td>
+              <span>Sep 9</span>
+            </td>
+            <td>
+              <span>6h </span>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Hace parte de la primera entrega.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>1.1.1</span>
+            </td>
+            <td>
+              <a name="task3" style="margin-left: 36px" id="task3">
+                <span>Requerimientos funcionales</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 8</span>
+            </td>
+            <td>
+              <span>Sep 8</span>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>100%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar requerimientos funcionales por modulos, es decir, modulo de tarjetsas, buses-rutas y estaciones, empleados, reportes y reclamos. Presentarlos cumpliendo el estándar IEEE-830</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>1.1.2</span>
+            </td>
+            <td>
+              <a name="task4" style="margin-left: 36px" id="task4">
+                <span>Requerimientos no funcionales</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 8</span>
+            </td>
+            <td>
+              <span>Sep 9</span>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>100%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Se debe especificar las restricciones en las que se ha modelado la solución. Se deben establecer los estándares a usar, las tecnologías, tiempos de respuesta y el condiciones del hardware como mínimo.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>1.2</span>
+            </td>
+            <td>
+              <a name="task5" style="font-weight: bold; margin-left: 18px" id="task5">
+                <span>Validación de requerimientos</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 10</span>
+            </td>
+            <td>
+              <span>Sep 11</span>
+            </td>
+            <td>
+              <span>7h </span>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Hace parte de la primera entrega.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>1.2.1</span>
+            </td>
+            <td>
+              <a name="task6" style="margin-left: 36px" id="task6">
+                <span>Lista de chequeo requerimientos funcionales</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 10</span>
+            </td>
+            <td>
+              <span>Sep 10</span>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+            <td align="center">
+              <span>3</span>
+            </td>
+            <td align="right">
+              <span>100%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Se debe establecer los las cuestiones para calificar los siguientes items: necesario, claro, verificable, viable, completo, priorizable y consistente. Una vez establecidos los items se proce a validar y corregir los requerimientos usando esta lista de chequeo.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>1.2.2</span>
+            </td>
+            <td>
+              <a name="task7" style="margin-left: 36px" id="task7">
+                <span>Lista de chequeo requerimientos no funcionales</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 10</span>
+            </td>
+            <td>
+              <span>Sep 11</span>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+            <td align="center">
+              <span>3</span>
+            </td>
+            <td align="right">
+              <span>100%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Se debe redactar las cuestiones para calificar los siguientes items: desempeño del sistema(tiempo), confiabilidad del sistema, hardware, software y comunicaciones. Una vez se obtenga la lista con todas las cuestiones se procede a evaluar los requerimientos no funcionales y corregirles si es necesario.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>1.2.3</span>
+            </td>
+            <td>
+              <a name="task8" style="margin-left: 36px" id="task8">
+                <span>Matriz de chequeo</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 11</span>
+            </td>
+            <td>
+              <span>Sep 11</span>
+            </td>
+            <td>
+              <span>1h </span>
+            </td>
+            <td align="center">
+              <span>3</span>
+            </td>
+            <td align="right">
+              <span>100%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Con los resultados obtenidos en la la lista de chequeo se debe realizar la matriz de chequeo con la primera iteración de revisión.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2</span>
+            </td>
+            <td>
+              <a name="task9" style="font-weight: bold; margin-left: 0px" id="task9">
+                <span>Elaboración</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 12</span>
+            </td>
+            <td>
+              <span>Oct 19</span>
+            </td>
+            <td>
+              <span>7d 3h </span>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <span></span>
+            </td>
+            <td class="note">
+              <span></span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.1</span>
+            </td>
+            <td>
+              <a name="task10" style="margin-left: 18px" id="task10">
+                <span>Documento SRS</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 12</span>
+            </td>
+            <td>
+              <span>Sep 15</span>
+            </td>
+            <td>
+              <span>6h </span>
+            </td>
+            <td align="center">
+              <span>4</span>
+            </td>
+            <td align="right">
+              <span>100%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Escribir el documento SRS (Software Requirements Specification) incluir requerimientos funcionales, no funcionales, las listas de chequeo y la matriz de chequeo.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.2</span>
+            </td>
+            <td>
+              <a name="task11" style="margin-left: 18px" id="task11">
+                <span>Iteración fase inicio, corrección requerimientos funcionales</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 23</span>
+            </td>
+            <td>
+              <span>Sep 24</span>
+            </td>
+            <td>
+              <span>2h </span>
+            </td>
+            <td align="center">
+              <span>4</span>
+            </td>
+            <td align="right">
+              <span>80%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span></span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.3</span>
+            </td>
+            <td>
+              <a name="task12" style="font-weight: bold; margin-left: 18px" id="task12">
+                <span>Análisis y elaboración de casos de uso</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 15</span>
+            </td>
+            <td>
+              <span>Sep 21</span>
+            </td>
+            <td>
+              <span>1d 1h </span>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Hace parte de la segunda entrega.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.3.1</span>
+            </td>
+            <td>
+              <a name="task13" style="margin-left: 36px" id="task13">
+                <span>Diagrama de casos de uso</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 15</span>
+            </td>
+            <td>
+              <span>Sep 17</span>
+            </td>
+            <td>
+              <span>6h </span>
+            </td>
+            <td align="center">
+              <span>4</span>
+            </td>
+            <td align="right">
+              <span>100%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar los diagrama de casos de uso, realizarlo por paquetes(modulos) estos son:  gestión de usuarios, ingresar al sistema, general, tarjetas, rutas, buses, estaciones, reclamos y reportes. usar UML 2.0</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.3.2</span>
+            </td>
+            <td>
+              <a name="task14" style="margin-left: 36px" id="task14">
+                <span>Casos de uso expandidos</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 20</span>
+            </td>
+            <td>
+              <span>Sep 21</span>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+            <td align="center">
+              <span>4</span>
+            </td>
+            <td align="right">
+              <span>100%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Expandir dos modulos de casos de uso, los modulos a expandir son, cu_reclamos y cu_buses. Usar plantilla.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.4</span>
+            </td>
+            <td>
+              <a name="task15" style="font-weight: bold; margin-left: 18px" id="task15">
+                <span>Modelo de datos</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 1</span>
+            </td>
+            <td>
+              <span>Oct 4</span>
+            </td>
+            <td>
+              <span>1d 2h </span>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Hace parte de cuarta entrega.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.4.1</span>
+            </td>
+            <td>
+              <a name="task16" style="margin-left: 36px" id="task16">
+                <span>Diagrama E-R</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 1</span>
+            </td>
+            <td>
+              <span>Oct 3</span>
+            </td>
+            <td>
+              <span>7h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>50%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar el diagrma entidad relación (E.R) conforme al enunciado del proyecto.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.4.2</span>
+            </td>
+            <td>
+              <a name="task17" style="margin-left: 36px" id="task17">
+                <span>Diagrama UML</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 3</span>
+            </td>
+            <td>
+              <span>Oct 3</span>
+            </td>
+            <td>
+              <span>1h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Una vez se tenga el diagrama E-R realizar el modelo de datos en UML 2.0.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.4.3</span>
+            </td>
+            <td>
+              <a name="task18" style="margin-left: 36px" id="task18">
+                <span>Script SQL</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 4</span>
+            </td>
+            <td>
+              <span>Oct 4</span>
+            </td>
+            <td>
+              <span>1h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Una vez terminado el diagrama E-R se procede a realizar el script en SQL para postgres version 8.4.x</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.5</span>
+            </td>
+            <td>
+              <a name="task19" style="margin-left: 18px" id="task19">
+                <span>Modelo arquitectural</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 7</span>
+            </td>
+            <td>
+              <span>Oct 9</span>
+            </td>
+            <td>
+              <span>6h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar especificación de la arquitectura a usa, y realizar el correspondiente diagrama.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.6</span>
+            </td>
+            <td>
+              <a name="task20" style="font-weight: bold; margin-left: 18px" id="task20">
+                <span>Plan de proyecto</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 28</span>
+            </td>
+            <td>
+              <span>Oct 1</span>
+            </td>
+            <td>
+              <span>1d 3h </span>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Hace parte de la tercera entrega.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.6.1</span>
+            </td>
+            <td>
+              <a name="task21" style="margin-left: 36px" id="task21">
+                <span>Calendarización con responsables</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 28</span>
+            </td>
+            <td>
+              <span>Oct 1</span>
+            </td>
+            <td>
+              <span>6h </span>
+            </td>
+            <td align="center">
+              <span>4</span>
+            </td>
+            <td align="right">
+              <span>50%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Listas las actividades por realizar con sus respectivos tiempos y establecer los responsables. Usar la herramienta planner de gnome version 0.14.x</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.6.2</span>
+            </td>
+            <td>
+              <a name="task22" style="margin-left: 36px" id="task22">
+                <span>Matriz funcional</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 1</span>
+            </td>
+            <td>
+              <span>Oct 1</span>
+            </td>
+            <td>
+              <span>1h </span>
+            </td>
+            <td align="center">
+              <span>4</span>
+            </td>
+            <td align="right">
+              <span>50%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizando la calendarizacion con responsables, obtener la matriz funcional.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.6.3</span>
+            </td>
+            <td>
+              <a name="task23" style="margin-left: 36px" id="task23">
+                <span>Diagrama de gantt</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 1</span>
+            </td>
+            <td>
+              <span>Oct 1</span>
+            </td>
+            <td>
+              <span>1h </span>
+            </td>
+            <td align="center">
+              <span>4</span>
+            </td>
+            <td align="right">
+              <span>50%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Despues de realizar la calendarizacion con responsables obtener el diagrama de gantt.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.6.4</span>
+            </td>
+            <td>
+              <a name="task24" style="margin-left: 36px" id="task24">
+                <span>Riesgos y acciones de contigencia.</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 28</span>
+            </td>
+            <td>
+              <span>Sep 29</span>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+            <td align="center">
+              <span>3</span>
+            </td>
+            <td align="right">
+              <span>100%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar el análisis de riesgos, del proyecto, tecnología y del negocio, a su vez  las acciones de contingencia correspondientes.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.7</span>
+            </td>
+            <td>
+              <a name="task25" style="font-weight: bold; margin-left: 18px" id="task25">
+                <span>Diseño</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 9</span>
+            </td>
+            <td>
+              <span>Oct 19</span>
+            </td>
+            <td>
+              <span>1d 7h </span>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <span></span>
+            </td>
+            <td class="note">
+              <span></span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.7.1</span>
+            </td>
+            <td>
+              <a name="task26" style="margin-left: 36px" id="task26">
+                <span>Diagrama de paquetes</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 9</span>
+            </td>
+            <td>
+              <span>Oct 9</span>
+            </td>
+            <td>
+              <span>3h </span>
+            </td>
+            <td align="center">
+              <span>4</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar el diagrama de paquetes del sistema usando UML 2.0.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>2.7.2</span>
+            </td>
+            <td>
+              <a name="task27" style="margin-left: 36px" id="task27">
+                <span>Diagrama de clases</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 11</span>
+            </td>
+            <td>
+              <span>Oct 12</span>
+            </td>
+            <td>
+              <span>7h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar los diagrama de clases para los diferentes modulos del sistema. Usar UML 2.0, bien prodría usarse Enterprise architect.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>2.7.3</span>
+            </td>
+            <td>
+              <a name="task28" style="margin-left: 36px" id="task28">
+                <span>Bocetos de interfaz</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 17</span>
+            </td>
+            <td>
+              <span>Oct 19</span>
+            </td>
+            <td>
+              <span>4h </span>
+            </td>
+            <td align="center">
+              <span>2</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar los bocetos de la interfaz gráfica. exportarlos en imagenes.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>3</span>
+            </td>
+            <td>
+              <a name="task29" style="font-weight: bold; margin-left: 0px" id="task29">
+                <span>Capacitación</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 17</span>
+            </td>
+            <td>
+              <span>Oct 24</span>
+            </td>
+            <td>
+              <span>1d 7h </span>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <span></span>
+            </td>
+            <td class="note">
+              <span></span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>3.1</span>
+            </td>
+            <td>
+              <a name="task30" style="margin-left: 18px" id="task30">
+                <span>JSF</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 17</span>
+            </td>
+            <td>
+              <span>Oct 24</span>
+            </td>
+            <td>
+              <span>1d 7h </span>
+            </td>
+            <td align="center">
+              <span>4</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar trabajo de investigación de la tecnología JSF. revisar ejemplos y realizar un ejercicio. </span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>4</span>
+            </td>
+            <td>
+              <a name="task31" style="font-weight: bold; margin-left: 0px" id="task31">
+                <span>Implementación</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 20</span>
+            </td>
+            <td>
+              <span>Dec 1</span>
+            </td>
+            <td>
+              <span>21d 3h </span>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <span></span>
+            </td>
+            <td class="note">
+              <span></span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>4.1</span>
+            </td>
+            <td>
+              <a name="task32" style="margin-left: 18px" id="task32">
+                <span>Gestión de usuarios</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 20</span>
+            </td>
+            <td>
+              <span>Oct 30</span>
+            </td>
+            <td>
+              <span>2d 6h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar el modulo gestión de usuarios. manejando lo especificado en la arquitectura. Se debe entregar en funcionamiento.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>4.2</span>
+            </td>
+            <td>
+              <a name="task33" style="margin-left: 18px" id="task33">
+                <span>Gestión de tarjetas</span>
+              </a>
+            </td>
+            <td>
+              <span>Oct 27</span>
+            </td>
+            <td>
+              <span>Nov 6</span>
+            </td>
+            <td>
+              <span>2d 6h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar el modulo de tarjetas, teniendo en cuenta lo especificado en diagrama  de claes y modelo arquitectural. Se debe entregar funcional.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>4.3</span>
+            </td>
+            <td>
+              <a name="task34" style="margin-left: 18px" id="task34">
+                <span>Gestión de buses</span>
+              </a>
+            </td>
+            <td>
+              <span>Nov 10</span>
+            </td>
+            <td>
+              <span>Nov 20</span>
+            </td>
+            <td>
+              <span>2d 6h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar el modulo gestión de buses. manejando lo especificado en la arquitectura y en los diagramas de clase. Se debe entregar en funcionamiento.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>4.4</span>
+            </td>
+            <td>
+              <a name="task35" style="margin-left: 18px" id="task35">
+                <span>Gestión de estaciones</span>
+              </a>
+            </td>
+            <td>
+              <span>Nov 10</span>
+            </td>
+            <td>
+              <span>Nov 20</span>
+            </td>
+            <td>
+              <span>2d 6h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar el modulo gestión de estaciones, manejando lo especificado en la arquitectura y en los diagrama de clases. Se debe entregar en funcionamiento.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>4.5</span>
+            </td>
+            <td>
+              <a name="task36" style="margin-left: 18px" id="task36">
+                <span>Gestión de rutas</span>
+              </a>
+            </td>
+            <td>
+              <span>Nov 17</span>
+            </td>
+            <td>
+              <span>Nov 22</span>
+            </td>
+            <td>
+              <span>1d 4h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar el modulo gestión de rutas, manejando lo especificado en la arquitectura y en los diagrama de clases.  Para realizar este modulo se debe tener avanzado gestión de buses y de estaciones. Se debe entregar en funcionamiento.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>4.6</span>
+            </td>
+            <td>
+              <a name="task37" style="margin-left: 18px" id="task37">
+                <span>Reportes</span>
+              </a>
+            </td>
+            <td>
+              <span>Nov 24</span>
+            </td>
+            <td>
+              <span>Nov 27</span>
+            </td>
+            <td>
+              <span>1d 1h </span>
+            </td>
+            <td align="center">
+              <span>4</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar los reportes teniendo en cuenta lo especificado en la arquitectura y los diagramas de clase. Para la lista de reportes, remitirse al documento SRS en la sección de requerimientos funcionales referentes a reportes.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>4.7</span>
+            </td>
+            <td>
+              <a name="task38" style="margin-left: 18px" id="task38">
+                <span>Pruebas funcionales</span>
+              </a>
+            </td>
+            <td>
+              <span>Nov 24</span>
+            </td>
+            <td>
+              <span>Nov 26</span>
+            </td>
+            <td>
+              <span>4h </span>
+            </td>
+            <td align="center">
+              <span>3</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar las prubas a todos los modulos, presentar los resultados y análisis.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>4.8</span>
+            </td>
+            <td>
+              <a name="task39" style="margin-left: 18px" id="task39">
+                <span>Integración</span>
+              </a>
+            </td>
+            <td>
+              <span>Nov 3</span>
+            </td>
+            <td>
+              <span>Nov 26</span>
+            </td>
+            <td>
+              <span>5d 5h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Esta integración se lleva a cabo a medida que se van realizando los modulos de las diferentes gestiones.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>4.9</span>
+            </td>
+            <td>
+              <a name="task40" style="margin-left: 18px" id="task40">
+                <span>Pruebas de integración</span>
+              </a>
+            </td>
+            <td>
+              <span>Nov 27</span>
+            </td>
+            <td>
+              <span>Nov 29</span>
+            </td>
+            <td>
+              <span>6h </span>
+            </td>
+            <td align="center">
+              <span>4</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar las respectivas pruebas a la aplicación, para comprobar que la integración es robusta</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>4.10</span>
+            </td>
+            <td>
+              <a name="task41" style="margin-left: 18px" id="task41">
+                <span>Pruebas de usabilidad</span>
+              </a>
+            </td>
+            <td>
+              <span>Nov 29</span>
+            </td>
+            <td>
+              <span>Dec 1</span>
+            </td>
+            <td>
+              <span>4h </span>
+            </td>
+            <td align="center">
+              <span>3</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar pruebas de usabilidad a la aplicación completa.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>5</span>
+            </td>
+            <td>
+              <a name="task42" style="font-weight: bold; margin-left: 0px" id="task42">
+                <span>Transición</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 8</span>
+            </td>
+            <td>
+              <span>Dec 8</span>
+            </td>
+            <td>
+              <span>23d 3h </span>
+            </td>
+            <td></td>
+            <td></td>
+            <td>
+              <span></span>
+            </td>
+            <td class="note">
+              <span></span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>5.1</span>
+            </td>
+            <td>
+              <a name="task43" style="margin-left: 18px" id="task43">
+                <span>Entrega 1 documentación</span>
+              </a>
+            </td>
+            <td>
+              <span>Sep 8</span>
+            </td>
+            <td>
+              <span>Dec 1</span>
+            </td>
+            <td>
+              <span>20d 3h </span>
+            </td>
+            <td align="center">
+              <span>4</span>
+            </td>
+            <td align="right">
+              <span>50%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>La entrega de documentación se realiza a lo largo del proyecto.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>5.2</span>
+            </td>
+            <td>
+              <a name="task44" style="margin-left: 18px" id="task44">
+                <span>Entrega 2 manules de usuario</span>
+              </a>
+            </td>
+            <td>
+              <span>Nov 26</span>
+            </td>
+            <td>
+              <span>Nov 29</span>
+            </td>
+            <td>
+              <span>1d </span>
+            </td>
+            <td align="center">
+              <span>2</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar el respectivo manual de usuario final y el manual de usuario administrador. exportar en formato pdf.</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <span>5.3</span>
+            </td>
+            <td>
+              <a name="task45" style="margin-left: 18px" id="task45">
+                <span>Entrega 3 capacitación</span>
+              </a>
+            </td>
+            <td>
+              <span>Dec 1</span>
+            </td>
+            <td>
+              <span>Dec 8</span>
+            </td>
+            <td>
+              <span>1d 7h </span>
+            </td>
+            <td align="center">
+              <span>4</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Realizar la capacitación a los usuarios finales del sistema de transporte masivo.</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <span>5.4</span>
+            </td>
+            <td>
+              <a name="task46" style="margin-left: 18px" id="task46">
+                <span>Entrega 4 aplicación completa</span>
+              </a>
+            </td>
+            <td>
+              <span>Dec 8</span>
+            </td>
+            <td>
+              <span>Dec 8</span>
+            </td>
+            <td>
+              <span>1h </span>
+            </td>
+            <td align="center">
+              <span>5</span>
+            </td>
+            <td align="right">
+              <span>0%
+                </span>
+            </td>
+            <td align="right">
+              <span></span>
+            </td>
+            <td class="note">
+              <span>Presentación de la aplicación final.</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="separator"></div>
+    <div class="resourcelist">
+      <h2>
+        <a name="resources" id="resources">Recursos</a>
+      </h2>
+      <div class="resourcelist-table">
+        <table cellspacing="0" cellpadding="0" border="1" width="100%">
+          <tr class="header" align="left">
+            <th>
+              <span>Nombre</span>
+            </th>
+            <th>
+              <span>Nombre corto</span>
+            </th>
+            <th>
+              <span>Tipo</span>
+            </th>
+            <th>
+              <span>Grupo</span>
+            </th>
+            <th>
+              <span>Correo-e</span>
+            </th>
+            <th>
+              <span>Coste</span>
+            </th>
+          </tr>
+          <tr class="odd">
+            <td>
+              <a name="res-1" id="res-1">
+                <span>Cristian Leonardo Ríos López</span>
+              </a>
+            </td>
+            <td>
+              <span>Cristian</span>
+            </td>
+            <td>
+              <span>Trabajo</span>
+            </td>
+            <td>
+              <span>Desarrollo de Software II</span>
+            </td>
+            <td>
+              <a href="mailto:dragonblanco452@gmail.com">
+                <span>dragonblanco452@gmail.com</span>
+              </a>
+            </td>
+            <td align="right">
+              <span>0</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <a name="res-3" id="res-3">
+                <span>Edgar Andrés Moncada Taborda</span>
+              </a>
+            </td>
+            <td>
+              <span>Edgar</span>
+            </td>
+            <td>
+              <span>Trabajo</span>
+            </td>
+            <td>
+              <span>Desarrollo de Software II</span>
+            </td>
+            <td>
+              <a href="mailto:edgarandres29@gmail.com&#9;">
+                <span>edgarandres29@gmail.com	</span>
+              </a>
+            </td>
+            <td align="right">
+              <span>0</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <a name="res-2" id="res-2">
+                <span>Luis Felipe Vargas Rojas</span>
+              </a>
+            </td>
+            <td>
+              <span>Felipe</span>
+            </td>
+            <td>
+              <span>Trabajo</span>
+            </td>
+            <td>
+              <span>Desarrollo de Software II</span>
+            </td>
+            <td>
+              <a href="mailto:felipex1991@gmail.com">
+                <span>felipex1991@gmail.com</span>
+              </a>
+            </td>
+            <td align="right">
+              <span>0</span>
+            </td>
+          </tr>
+          <tr class="even">
+            <td>
+              <a name="res-5" id="res-5">
+                <span>María Andrea Cruz Blandón</span>
+              </a>
+            </td>
+            <td>
+              <span>Andrea</span>
+            </td>
+            <td>
+              <span>Trabajo</span>
+            </td>
+            <td>
+              <span>Desarrollo de Software II</span>
+            </td>
+            <td>
+              <a href="mailto:andrea1391@gmail.com">
+                <span>andrea1391@gmail.com</span>
+              </a>
+            </td>
+            <td align="right">
+              <span>0</span>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td>
+              <a name="res-4" id="res-4">
+                <span>Yerminson Doney Gonzalez Muñoz</span>
+              </a>
+            </td>
+            <td>
+              <span>Yerminson</span>
+            </td>
+            <td>
+              <span>Trabajo</span>
+            </td>
+            <td>
+              <span>Desarrollo de Software II</span>
+            </td>
+            <td>
+              <a href="mailto:yermigon@gmail.com">
+                <span>yermigon@gmail.com</span>
+              </a>
+            </td>
+            <td align="right">
+              <span>0</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="footer">
+      <div>Este archivo fue generado por 
+      <a href="http://live.gnome.org/Planner/" style="text-decoration: underline;">Planner</a></div>
+    </div>
+  </body>
+</html>
