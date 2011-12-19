@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>bus</title>
+<title>medida_reclamo_operario_agrega</title>
 <link href="../css/ea.css" rel="stylesheet" type="text/css" />
 <script>
 function initPage(src) {
@@ -16,15 +16,15 @@ function initPage(src) {
 <body onload="initPage(this);" class="Content">
 <div class="pageHeader"></div>
 <div class="PageBody">
-	<span class="ObjectTitle">bus  : public  &lt;&lt;table&gt;&gt; class</span>
+	<span class="ObjectTitle">medida_reclamo_operario_agrega  : public  &lt;&lt;table&gt;&gt; class</span>
 	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
 		<tr>
 			<td width="15%" class="ObjectDetailsTopic">Created:</td>
-			<td width="85%" class="ObjectDetailsValue">17/10/2011 09:41:25 a.m.</td>
+			<td width="85%" class="ObjectDetailsValue">17/10/2011 03:04:07 p.m.</td>
 		</tr>
 		<tr>
 			<td class="ObjectDetailsTopic">Modified:</td>
-			<td class="ObjectDetailsValue">17/10/2011 11:54:03 a.m.</td>
+			<td class="ObjectDetailsValue">09/12/2011 09:48:16 p.m.</td>
 		</tr>
 		<tr style="height: 10px"><td colspan="2"></td></tr>
 		<tr>
@@ -57,7 +57,7 @@ function initPage(src) {
 		</tr>
 		<tr id="adv00" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
-			<td class="ObjectDetailsValue">{D685D3C2-7CB8-4c6a-BF1B-41C78435965A}</td>
+			<td class="ObjectDetailsValue">{A0A6A15D-60B9-4769-A72F-72070C319004}</td>
 		</tr>
 		<tr id="adv01" style="display: none;">
 			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
@@ -69,7 +69,7 @@ function initPage(src) {
 		<ul class="ItemTitle">
 			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
 			<li onClick="parent.toggleItem('Operations');" id="OperationsTitle">Operations</li>
-			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
 		</ul>
 <div class="ItemBody" id="AttributesTable">
 	<table border="0" cellspacing="0" cellpadding="0" class="Table">
@@ -77,56 +77,34 @@ function initPage(src) {
 			<td width="100%" class="TableHeading">Attribute</td>
 		</tr>
 						<tr>
-				<td width="100%" class="TableRow" valign="top"><i>public boolean</i><br /><strong>&nbsp;&nbsp;estado</strong></td>
+				<td width="100%" class="TableRow" valign="top"><i>public varchar(50)</i><br /><strong>&nbsp;&nbsp;id_operario</strong></td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes36" onclick="parent.toggleDiv('detailsDIVAttributes36','DetailsImageAttributes36')" />Details:
-						<div id="detailsDIVAttributes36" class="DetailsDiv" >
-						<i>&lt;&lt;column&gt;&gt;</i>&nbsp;
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes122" onclick="parent.toggleDiv('detailsDIVAttributes122','DetailsImageAttributes122')" />Details:
+						<div id="detailsDIVAttributes122" class="DetailsDiv" >
+						<i>&lt;&lt;column&gt;&gt;Ordered <br /></i>&nbsp;
 						</div>
 					</div>
 				</td>
 			</tr>			<tr>
-				<td width="100%" class="TableRow" valign="top"><i>public varchar(50)</i><br /><strong>&nbsp;&nbsp;tipo</strong></td>
+				<td width="100%" class="TableRow" valign="top"><i>public integer</i><br /><strong>&nbsp;&nbsp;ticket</strong></td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes37" onclick="parent.toggleDiv('detailsDIVAttributes37','DetailsImageAttributes37')" />Details:
-						<div id="detailsDIVAttributes37" class="DetailsDiv" >
-						<i>&lt;&lt;column&gt;&gt;</i>&nbsp;
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes123" onclick="parent.toggleDiv('detailsDIVAttributes123','DetailsImageAttributes123')" />Details:
+						<div id="detailsDIVAttributes123" class="DetailsDiv" >
+						<i>&lt;&lt;column&gt;&gt;Ordered <br /></i>AutoNum=False<br>Increment=1<br>property=AutoNum=0;StartNum=1;Increment=1;<br>StartNum=1<br>&nbsp;
 						</div>
 					</div>
 				</td>
 			</tr>			<tr>
-				<td width="100%" class="TableRow" valign="top"><i>public integer</i><br /><strong>&nbsp;&nbsp;capacidad</strong></td>
+				<td width="100%" class="TableRow" valign="top"><i>public integer</i><br /><strong>&nbsp;&nbsp;id_medida</strong></td>
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes38" onclick="parent.toggleDiv('detailsDIVAttributes38','DetailsImageAttributes38')" />Details:
-						<div id="detailsDIVAttributes38" class="DetailsDiv" >
-						<i>&lt;&lt;column&gt;&gt;</i>&nbsp;
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="100%" class="TableRow" valign="top"><i>public integer</i><br /><strong>&nbsp;&nbsp;id_interno</strong></td>
-			</tr>
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes39" onclick="parent.toggleDiv('detailsDIVAttributes39','DetailsImageAttributes39')" />Details:
-						<div id="detailsDIVAttributes39" class="DetailsDiv" >
-						<i>&lt;&lt;column&gt;&gt;</i>AutoNum=True<br>Increment=1<br>property=AutoNum=1;StartNum=1;Increment=1;<br>StartNum=1<br>&nbsp;
-						</div>
-					</div>
-				</td>
-			</tr>			<tr>
-				<td width="100%" class="TableRow" valign="top"><i>public static varchar(10)</i><br /><strong>&nbsp;&nbsp;matricula</strong></td>
-			</tr>
-			<tr>
-				<td class="TableRowBottomDashed"  colspan="1">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes40" onclick="parent.toggleDiv('detailsDIVAttributes40','DetailsImageAttributes40')" />Details:
-						<div id="detailsDIVAttributes40" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes124" onclick="parent.toggleDiv('detailsDIVAttributes124','DetailsImageAttributes124')" />Details:
+						<div id="detailsDIVAttributes124" class="DetailsDiv" >
 						<i>&lt;&lt;column&gt;&gt;Ordered <br /></i>&nbsp;
 						</div>
 					</div>
@@ -142,22 +120,22 @@ function initPage(src) {
 						<tr>
 				<td width="100%" class="TableRow">
 					<i>public</i><br />
-					<strong>PK_bus</strong>(<br />
-					<a href="#" onclick="parent.toggleData('param{916B9A07-9FF0-40bd-9E3F-D3F1A98A75F0}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{916B9A07-9FF0-40bd-9E3F-D3F1A98A75F0}" border="0" />matricula: varchar</a>, 
+					<strong>FK_medida_reclamo_operario_agrega_operario</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{A292000E-29C0-42f7-B15E-BF7DB5C9AAD6}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{A292000E-29C0-42f7-B15E-BF7DB5C9AAD6}" border="0" />id_operario: varchar</a>, 
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-						<tr id="param{916B9A07-9FF0-40bd-9E3F-D3F1A98A75F0}00" style="display: none;">
+						<tr id="param{A292000E-29C0-42f7-B15E-BF7DB5C9AAD6}00" style="display: none;">
 							<td width="50"><strong>Default:</strong></td>
 							<td></td>
 						</tr>
-						<tr id="param{916B9A07-9FF0-40bd-9E3F-D3F1A98A75F0}01" style="display: none;">
+						<tr id="param{A292000E-29C0-42f7-B15E-BF7DB5C9AAD6}01" style="display: none;">
 							<td width="50"><strong>Kind:</strong></td>
 							<td>in</td>
 						</tr>
-						<tr id="param{916B9A07-9FF0-40bd-9E3F-D3F1A98A75F0}02" style="display: none;">
+						<tr id="param{A292000E-29C0-42f7-B15E-BF7DB5C9AAD6}02" style="display: none;">
 							<td width="50"><strong>Stereotype: </strong></td>
 							<td></td>
 						</tr>
-						<tr id="param{916B9A07-9FF0-40bd-9E3F-D3F1A98A75F0}03" style="display: none;">
+						<tr id="param{A292000E-29C0-42f7-B15E-BF7DB5C9AAD6}03" style="display: none;">
 							<td width="50"></td>
 							<td></td>
 						</tr>
@@ -167,8 +145,130 @@ function initPage(src) {
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations41" onclick="parent.toggleDiv('detailsDIVOperations41','DetailsImageOperations41')" />Details:
-						<div id="detailsDIVOperations41" class="DetailsDiv" >
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations125" onclick="parent.toggleDiv('detailsDIVOperations125','DetailsImageOperations125')" />Details:
+						<div id="detailsDIVOperations125" class="DetailsDiv" >
+					<i> &lt;&lt;FK&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>property=Delete Cascade=1;Update Cascade=0;<br/></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>FK_medida_reclamo_operario_agrega_reclamo</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{522AA4B1-D692-4efa-8D4F-9955231AB90E}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{522AA4B1-D692-4efa-8D4F-9955231AB90E}" border="0" />ticket: integer</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{522AA4B1-D692-4efa-8D4F-9955231AB90E}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{522AA4B1-D692-4efa-8D4F-9955231AB90E}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{522AA4B1-D692-4efa-8D4F-9955231AB90E}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{522AA4B1-D692-4efa-8D4F-9955231AB90E}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations126" onclick="parent.toggleDiv('detailsDIVOperations126','DetailsImageOperations126')" />Details:
+						<div id="detailsDIVOperations126" class="DetailsDiv" >
+					<i> &lt;&lt;FK&gt;&gt; </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>property=Delete Cascade=1;Update Cascade=1;<br/></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>PK_medida_reclamo_operario_agrega</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{D7DA1E4B-2186-411c-84B8-6415FFE684D9}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{D7DA1E4B-2186-411c-84B8-6415FFE684D9}" border="0" />id_operario: varchar</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{D7DA1E4B-2186-411c-84B8-6415FFE684D9}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D7DA1E4B-2186-411c-84B8-6415FFE684D9}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{D7DA1E4B-2186-411c-84B8-6415FFE684D9}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{D7DA1E4B-2186-411c-84B8-6415FFE684D9}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{06F59DE8-5970-4443-8870-0D494F75931B}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{06F59DE8-5970-4443-8870-0D494F75931B}" border="0" />ticket: integer</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{06F59DE8-5970-4443-8870-0D494F75931B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{06F59DE8-5970-4443-8870-0D494F75931B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{06F59DE8-5970-4443-8870-0D494F75931B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{06F59DE8-5970-4443-8870-0D494F75931B}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{4974D8B7-B799-4959-B3D0-C07B74D64680}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{4974D8B7-B799-4959-B3D0-C07B74D64680}" border="0" />id_medida: integer</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{4974D8B7-B799-4959-B3D0-C07B74D64680}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4974D8B7-B799-4959-B3D0-C07B74D64680}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{4974D8B7-B799-4959-B3D0-C07B74D64680}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{4974D8B7-B799-4959-B3D0-C07B74D64680}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations127" onclick="parent.toggleDiv('detailsDIVOperations127','DetailsImageOperations127')" />Details:
+						<div id="detailsDIVOperations127" class="DetailsDiv" >
 					<i> &lt;&lt;PK&gt;&gt; </i>
 					<table>
 						<tr>
@@ -184,22 +284,22 @@ function initPage(src) {
 			<tr>
 				<td width="100%" class="TableRow">
 					<i>public</i><br />
-					<strong>UQ_bus_matricula</strong>(<br />
-					<a href="#" onclick="parent.toggleData('param{30FB03F5-3EB8-4e42-9E20-0082528DF724}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{30FB03F5-3EB8-4e42-9E20-0082528DF724}" border="0" />matricula: varchar</a>, 
+					<strong>FK_imedida_reclamo_operario_agrega_medida</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{97E25FDF-8D03-4050-B935-DE386DCCF8FB}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{97E25FDF-8D03-4050-B935-DE386DCCF8FB}" border="0" />id_medida: integer</a>, 
 					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
-						<tr id="param{30FB03F5-3EB8-4e42-9E20-0082528DF724}00" style="display: none;">
+						<tr id="param{97E25FDF-8D03-4050-B935-DE386DCCF8FB}00" style="display: none;">
 							<td width="50"><strong>Default:</strong></td>
 							<td></td>
 						</tr>
-						<tr id="param{30FB03F5-3EB8-4e42-9E20-0082528DF724}01" style="display: none;">
+						<tr id="param{97E25FDF-8D03-4050-B935-DE386DCCF8FB}01" style="display: none;">
 							<td width="50"><strong>Kind:</strong></td>
 							<td>in</td>
 						</tr>
-						<tr id="param{30FB03F5-3EB8-4e42-9E20-0082528DF724}02" style="display: none;">
+						<tr id="param{97E25FDF-8D03-4050-B935-DE386DCCF8FB}02" style="display: none;">
 							<td width="50"><strong>Stereotype: </strong></td>
 							<td></td>
 						</tr>
-						<tr id="param{30FB03F5-3EB8-4e42-9E20-0082528DF724}03" style="display: none;">
+						<tr id="param{97E25FDF-8D03-4050-B935-DE386DCCF8FB}03" style="display: none;">
 							<td width="50"></td>
 							<td></td>
 						</tr>
@@ -209,23 +309,33 @@ function initPage(src) {
 			</tr>
 			<tr>
 				<td class="TableRowBottomDashed"  colspan="1">
-					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations42" onclick="parent.toggleDiv('detailsDIVOperations42','DetailsImageOperations42')" />Details:
-						<div id="detailsDIVOperations42" class="DetailsDiv" >
-					<i> &lt;&lt;unique&gt;&gt; </i>
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations128" onclick="parent.toggleDiv('detailsDIVOperations128','DetailsImageOperations128')" />Details:
+						<div id="detailsDIVOperations128" class="DetailsDiv" >
+					<i> &lt;&lt;FK&gt;&gt; </i>
 					<table>
 						<tr>
-							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
-							<td></td>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>property=Delete Cascade=1;Update Cascade=1;<br/></td>
 						</tr>
 					</table>
-											
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>Notes: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Foreign key constraint&lt;br /&gt;
+		</td>
+	</tr>
+</table></div>
+						
 						</div>
 					</div>
 				</td>
 			</tr>
 
 		</table>
-</div>		<div class="ItemBody" id="AssociationsFromTable">
+</div>		<div class="ItemBody" id="AssociationsToTable">
 			<table border="0" cellspacing="0" cellpadding="0" class="Table">
 				<tr>
 					<td width="40%" class="TableHeading">Element</td>
@@ -234,22 +344,22 @@ function initPage(src) {
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA16.htm">«table» conductor_conduce_bus</a><br />
+						<a href="EA12.htm">«table» medida</a><br />
 						Class «FK» 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> FK_conductor_conduce_bus_bus<br />
+						<strong>Name:</strong> id_medida<br />
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> PK_bus<br />
+						<strong>Name:</strong> PK_medida<br />
 						&nbsp;	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageLink45" onclick="parent.toggleDiv('detailsDIVLink45','DetailsImageLink45')" />Details:
-							<div id="detailsDIVLink45" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageLink129" onclick="parent.toggleDiv('detailsDIVLink129','DetailsImageLink129')" />Details:
+							<div id="detailsDIVLink129" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
@@ -257,22 +367,45 @@ function initPage(src) {
 				</tr>
 				<tr>
 					<td width="40%" class="TableRow" valign="top">
-						<a href="EA14.htm">«table» bus_asignado_ruta</a><br />
+						<a href="EA14.htm">«table» operario</a><br />
 						Class «FK» 
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> FK_bus_asignado_ruta_bus<br />
+						<strong>Name:</strong> FK_medida_reclamo_operario_agrega_operario<br />
 						&nbsp;
 					</td>
 					<td width="30%" class="TableRow" valign="top">
-						<strong>Name:</strong> PK_bus<br />
+						<strong>Name:</strong> PK_operario<br />
 						&nbsp;	
 					</td>
 				</tr>
 				<tr>
 					<td class="TableRowBottomDashed"  colspan="3">
-						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageLink46" onclick="parent.toggleDiv('detailsDIVLink46','DetailsImageLink46')" />Details:
-							<div id="detailsDIVLink46" class="DetailsDiv" >
+						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageLink130" onclick="parent.toggleDiv('detailsDIVLink130','DetailsImageLink130')" />Details:
+							<div id="detailsDIVLink130" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA15.htm">«table» reclamo</a><br />
+						Class «FK» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> FK_medida_reclamo_operario_agrega_reclamo<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> PK_reclamo<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageLink131" onclick="parent.toggleDiv('detailsDIVLink131','DetailsImageLink131')" />Details:
+							<div id="detailsDIVLink131" class="DetailsDiv" >
 							&nbsp;
 							</div>
 						</div>
