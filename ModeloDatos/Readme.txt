@@ -10,3 +10,16 @@ pudo haber pasado algo sugiero una revisadita (Monki compañero de trabajo en est
 Saludos.
 
 Yerminson 
+
+--correcciones modelo 
+--solucion ambiguedades modelo datos dsii
+--1. se modela que auxiliar vendio la tarjeta, se deja o se quita?   --- ------------MUERE SE QUITA xD ... se agrega entonces como atributos el costo de la targeta vendida, la fecha en que fue vendida y colocar una relacion de targeta ---- vendida en ------estacion
+
+-- 2. en el gdocs de requrimientos dice 3.1.6 Colocar la fecha en que se hace la recarga y la estacion, esto no esta modelado ¿se hace una nueva relacion para esto que tenga, el valor de la recarga, auxiliar que recibe, pin, fecha, hora y estacion? -------------- va, pero se quita auxiliar
+
+--3. se debe de mantener la fecha y hora de asignacion de un empleado a una estacion? si esto se hace las demas relaciones que impliquen guardar auxilair y estacion solo se guardaria auxiliar y de ahi se saca la estacion, o al contrario, se guarda estacion y se saca auxiliar ------------ se supone que nunca cambian de estacion
+
+-- 4. para el credito se debe de guardar la fecha y la hora?? ---------no se guarda ninguno se cambia requerimiento
+
+-- 5. cuando se asigna un bus a una ruta se guarda la fecha y la hora? ---------- si
+
