@@ -1,0 +1,806 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Tarjeta</title>
+<link href="../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Tarjeta  : public   class</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">26/12/2011 10:47:46 p.m.</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">26/12/2011 10:47:46 p.m.</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">leonardo</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{4DBCA93B-04F0-4ea4-AE60-9F8CEFF26ACB}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA1.htm">Class Model</a></td>
+		</tr>
+	</table>
+	
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Attributes');" id="AttributesTitle">Attributes</li>
+			<li onClick="parent.toggleItem('Operations');" id="OperationsTitle">Operations</li>
+		</ul>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="100%" class="TableHeading">Attribute</td>
+		</tr>
+						<tr>
+				<td width="100%" class="TableRow" valign="top"><i>private Integer</i><br /><strong>&nbsp;&nbsp;costo</strong></td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes198" onclick="parent.toggleDiv('detailsDIVAttributes198','DetailsImageAttributes198')" />Details:
+						<div id="detailsDIVAttributes198" class="DetailsDiv" >
+						<i></i>&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow" valign="top"><i>private Integer</i><br /><strong>&nbsp;&nbsp;estacionVenta</strong></td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes199" onclick="parent.toggleDiv('detailsDIVAttributes199','DetailsImageAttributes199')" />Details:
+						<div id="detailsDIVAttributes199" class="DetailsDiv" >
+						<i></i>&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow" valign="top"><i>private boolean</i><br /><strong>&nbsp;&nbsp;estado</strong></td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes200" onclick="parent.toggleDiv('detailsDIVAttributes200','DetailsImageAttributes200')" />Details:
+						<div id="detailsDIVAttributes200" class="DetailsDiv" >
+						<i></i>&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow" valign="top"><i>private Date</i><br /><strong>&nbsp;&nbsp;fechaVenta</strong></td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes201" onclick="parent.toggleDiv('detailsDIVAttributes201','DetailsImageAttributes201')" />Details:
+						<div id="detailsDIVAttributes201" class="DetailsDiv" >
+						<i></i>&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow" valign="top"><i>private String</i><br /><strong>&nbsp;&nbsp;pin</strong></td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes202" onclick="parent.toggleDiv('detailsDIVAttributes202','DetailsImageAttributes202')" />Details:
+						<div id="detailsDIVAttributes202" class="DetailsDiv" >
+						<i></i>&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow" valign="top"><i>private Integer</i><br /><strong>&nbsp;&nbsp;saldo</strong></td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes203" onclick="parent.toggleDiv('detailsDIVAttributes203','DetailsImageAttributes203')" />Details:
+						<div id="detailsDIVAttributes203" class="DetailsDiv" >
+						<i></i>&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow" valign="top"><i>private Integer</i><br /><strong>&nbsp;&nbsp;tipo</strong></td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageAttributes204" onclick="parent.toggleDiv('detailsDIVAttributes204','DetailsImageAttributes204')" />Details:
+						<div id="detailsDIVAttributes204" class="DetailsDiv" >
+						<i></i>&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>
+<div class="ItemBody" id="OperationsTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="100%" class="TableHeading">Operation</td>
+		</tr>
+						<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>equals</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{1B75FE76-3446-4b0f-89FC-EDBEBF619436}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{1B75FE76-3446-4b0f-89FC-EDBEBF619436}" border="0" />object: Object</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{1B75FE76-3446-4b0f-89FC-EDBEBF619436}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1B75FE76-3446-4b0f-89FC-EDBEBF619436}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{1B75FE76-3446-4b0f-89FC-EDBEBF619436}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{1B75FE76-3446-4b0f-89FC-EDBEBF619436}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):boolean
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations205" onclick="parent.toggleDiv('detailsDIVOperations205','DetailsImageOperations205')" />Details:
+						<div id="detailsDIVOperations205" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>annotations=@Override<br/></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>getCosto</strong>():Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations206" onclick="parent.toggleDiv('detailsDIVOperations206','DetailsImageOperations206')" />Details:
+						<div id="detailsDIVOperations206" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>getEstacionVenta</strong>():Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations207" onclick="parent.toggleDiv('detailsDIVOperations207','DetailsImageOperations207')" />Details:
+						<div id="detailsDIVOperations207" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>getEstado</strong>():boolean
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations208" onclick="parent.toggleDiv('detailsDIVOperations208','DetailsImageOperations208')" />Details:
+						<div id="detailsDIVOperations208" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>getFechaVenta</strong>():Date
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations209" onclick="parent.toggleDiv('detailsDIVOperations209','DetailsImageOperations209')" />Details:
+						<div id="detailsDIVOperations209" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>getPin</strong>():String
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations210" onclick="parent.toggleDiv('detailsDIVOperations210','DetailsImageOperations210')" />Details:
+						<div id="detailsDIVOperations210" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>getSaldo</strong>():Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations211" onclick="parent.toggleDiv('detailsDIVOperations211','DetailsImageOperations211')" />Details:
+						<div id="detailsDIVOperations211" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>getTipo</strong>():Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations212" onclick="parent.toggleDiv('detailsDIVOperations212','DetailsImageOperations212')" />Details:
+						<div id="detailsDIVOperations212" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>setCosto</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{6CA416F0-EF48-4bb5-ABC3-29AC6EBA7A96}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{6CA416F0-EF48-4bb5-ABC3-29AC6EBA7A96}" border="0" />costo: Integer</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{6CA416F0-EF48-4bb5-ABC3-29AC6EBA7A96}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{6CA416F0-EF48-4bb5-ABC3-29AC6EBA7A96}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{6CA416F0-EF48-4bb5-ABC3-29AC6EBA7A96}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{6CA416F0-EF48-4bb5-ABC3-29AC6EBA7A96}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):void
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations213" onclick="parent.toggleDiv('detailsDIVOperations213','DetailsImageOperations213')" />Details:
+						<div id="detailsDIVOperations213" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>setEstacionVenta</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{C96020FF-49FF-4c90-BF86-1E689768FB52}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{C96020FF-49FF-4c90-BF86-1E689768FB52}" border="0" />estacionVenta: Integer</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{C96020FF-49FF-4c90-BF86-1E689768FB52}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C96020FF-49FF-4c90-BF86-1E689768FB52}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{C96020FF-49FF-4c90-BF86-1E689768FB52}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C96020FF-49FF-4c90-BF86-1E689768FB52}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):void
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations214" onclick="parent.toggleDiv('detailsDIVOperations214','DetailsImageOperations214')" />Details:
+						<div id="detailsDIVOperations214" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>setEstado</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{9BCD7D56-D49A-4c9b-B0C5-3C17F0CB420B}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{9BCD7D56-D49A-4c9b-B0C5-3C17F0CB420B}" border="0" />estado: boolean</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{9BCD7D56-D49A-4c9b-B0C5-3C17F0CB420B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{9BCD7D56-D49A-4c9b-B0C5-3C17F0CB420B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{9BCD7D56-D49A-4c9b-B0C5-3C17F0CB420B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{9BCD7D56-D49A-4c9b-B0C5-3C17F0CB420B}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):void
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations215" onclick="parent.toggleDiv('detailsDIVOperations215','DetailsImageOperations215')" />Details:
+						<div id="detailsDIVOperations215" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>setFechaVenta</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{E267DB3B-1CC1-461b-B7F4-7F7B308E04A4}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{E267DB3B-1CC1-461b-B7F4-7F7B308E04A4}" border="0" />fechaVenta: Date</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{E267DB3B-1CC1-461b-B7F4-7F7B308E04A4}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E267DB3B-1CC1-461b-B7F4-7F7B308E04A4}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{E267DB3B-1CC1-461b-B7F4-7F7B308E04A4}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{E267DB3B-1CC1-461b-B7F4-7F7B308E04A4}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):void
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations216" onclick="parent.toggleDiv('detailsDIVOperations216','DetailsImageOperations216')" />Details:
+						<div id="detailsDIVOperations216" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>setPin</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{A6E09110-8F0E-41f8-A866-1EDDE4E75F5B}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{A6E09110-8F0E-41f8-A866-1EDDE4E75F5B}" border="0" />pin: String</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{A6E09110-8F0E-41f8-A866-1EDDE4E75F5B}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A6E09110-8F0E-41f8-A866-1EDDE4E75F5B}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{A6E09110-8F0E-41f8-A866-1EDDE4E75F5B}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{A6E09110-8F0E-41f8-A866-1EDDE4E75F5B}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):void
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations217" onclick="parent.toggleDiv('detailsDIVOperations217','DetailsImageOperations217')" />Details:
+						<div id="detailsDIVOperations217" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>setSaldo</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{FC1CA40E-886F-45d5-8232-A9421AD7BBE9}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{FC1CA40E-886F-45d5-8232-A9421AD7BBE9}" border="0" />saldo: Integer</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{FC1CA40E-886F-45d5-8232-A9421AD7BBE9}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FC1CA40E-886F-45d5-8232-A9421AD7BBE9}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{FC1CA40E-886F-45d5-8232-A9421AD7BBE9}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{FC1CA40E-886F-45d5-8232-A9421AD7BBE9}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):void
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations218" onclick="parent.toggleDiv('detailsDIVOperations218','DetailsImageOperations218')" />Details:
+						<div id="detailsDIVOperations218" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>setTipo</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{BD90A881-05C5-4068-ADE8-ACC6E92D7CF2}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{BD90A881-05C5-4068-ADE8-ACC6E92D7CF2}" border="0" />tipo: Integer</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{BD90A881-05C5-4068-ADE8-ACC6E92D7CF2}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BD90A881-05C5-4068-ADE8-ACC6E92D7CF2}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{BD90A881-05C5-4068-ADE8-ACC6E92D7CF2}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{BD90A881-05C5-4068-ADE8-ACC6E92D7CF2}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):void
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations219" onclick="parent.toggleDiv('detailsDIVOperations219','DetailsImageOperations219')" />Details:
+						<div id="detailsDIVOperations219" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>Tarjeta</strong>():
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations220" onclick="parent.toggleDiv('detailsDIVOperations220','DetailsImageOperations220')" />Details:
+						<div id="detailsDIVOperations220" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>Tarjeta</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{ACF2CCFE-E66E-4136-9A56-BB82597E2044}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{ACF2CCFE-E66E-4136-9A56-BB82597E2044}" border="0" />pin: String</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{ACF2CCFE-E66E-4136-9A56-BB82597E2044}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{ACF2CCFE-E66E-4136-9A56-BB82597E2044}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{ACF2CCFE-E66E-4136-9A56-BB82597E2044}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{ACF2CCFE-E66E-4136-9A56-BB82597E2044}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations221" onclick="parent.toggleDiv('detailsDIVOperations221','DetailsImageOperations221')" />Details:
+						<div id="detailsDIVOperations221" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>Tarjeta</strong>(<br />
+					<a href="#" onclick="parent.toggleData('param{0AA7ABBB-DA66-452f-8803-118E3BED7172}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{0AA7ABBB-DA66-452f-8803-118E3BED7172}" border="0" />pin: String</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{0AA7ABBB-DA66-452f-8803-118E3BED7172}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0AA7ABBB-DA66-452f-8803-118E3BED7172}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{0AA7ABBB-DA66-452f-8803-118E3BED7172}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{0AA7ABBB-DA66-452f-8803-118E3BED7172}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+					<a href="#" onclick="parent.toggleData('param{C8238A4F-39B5-432d-8376-F4715FC9D2A2}')" style="text-decoration: none; color: #000000;"><img src="../images/plus03.gif" align="absmiddle" id="param{C8238A4F-39B5-432d-8376-F4715FC9D2A2}" border="0" />estado: boolean</a>, 
+					<table border="0" cellspacing="0" cellpadding="0" class="Table" style="padding: 4px 18px;">
+						<tr id="param{C8238A4F-39B5-432d-8376-F4715FC9D2A2}00" style="display: none;">
+							<td width="50"><strong>Default:</strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C8238A4F-39B5-432d-8376-F4715FC9D2A2}01" style="display: none;">
+							<td width="50"><strong>Kind:</strong></td>
+							<td>in</td>
+						</tr>
+						<tr id="param{C8238A4F-39B5-432d-8376-F4715FC9D2A2}02" style="display: none;">
+							<td width="50"><strong>Stereotype: </strong></td>
+							<td></td>
+						</tr>
+						<tr id="param{C8238A4F-39B5-432d-8376-F4715FC9D2A2}03" style="display: none;">
+							<td width="50"></td>
+							<td></td>
+						</tr>
+					</table>
+):
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations222" onclick="parent.toggleDiv('detailsDIVOperations222','DetailsImageOperations222')" />Details:
+						<div id="detailsDIVOperations222" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i></i><span style="margin-left: .7cm;"> </span></td>
+							<td></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" class="TableRow">
+					<i>public</i><br />
+					<strong>toString</strong>():String
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageOperations223" onclick="parent.toggleDiv('detailsDIVOperations223','DetailsImageOperations223')" />Details:
+						<div id="detailsDIVOperations223" class="DetailsDiv" >
+					<i>Sequential  </i>
+					<table>
+						<tr>
+							<td valign = "top"><i>Tags:</i><span style="margin-left: .7cm;"> </span></td>
+							<td>annotations=@Override<br/></td>
+						</tr>
+					</table>
+											
+						</div>
+					</div>
+				</td>
+			</tr>
+
+		</table>
+</div>	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>
