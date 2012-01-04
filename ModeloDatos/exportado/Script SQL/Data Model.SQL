@@ -1,11 +1,11 @@
-DROP TABLE IF EXISTS auxiliar;
+DROP TABLE IF EXISTS auxiliar CASCADE;
 CREATE TABLE auxiliar ( 
 	id varchar(20) NOT NULL,
 	id_jefe varchar(20),
 	trabaja_en integer
 );
 
-DROP TABLE IF EXISTS bus;
+DROP TABLE IF EXISTS bus CASCADE;
 CREATE TABLE bus ( 
 	matricula varchar(10) NOT NULL,
 	tipo varchar(50),
@@ -14,7 +14,7 @@ CREATE TABLE bus (
 	estado boolean NOT NULL
 );
 
-DROP TABLE IF EXISTS bus_asignado_ruta;
+DROP TABLE IF EXISTS bus_asignado_ruta CASCADE;
 CREATE TABLE bus_asignado_ruta ( 
 	nombre_ruta varchar(10) NOT NULL,
 	matricula varchar(10) NOT NULL,
@@ -23,13 +23,14 @@ CREATE TABLE bus_asignado_ruta (
 );
 
 
-DROP TABLE IF EXISTS conductor;
+DROP TABLE IF EXISTS conductor CASCADE;
 CREATE TABLE conductor ( 
-	id varchar(20) NOT NULL
+	id varchar(20) NOT NULL,
+   licencia varchar(20)
 );
 
 
-DROP TABLE IF EXISTS conductor_conduce_bus;
+DROP TABLE IF EXISTS conductor_conduce_bus CASCADE;
 CREATE TABLE conductor_conduce_bus ( 
 	id varchar(50) NOT NULL,
 	matricula varchar(10) NOT NULL,
@@ -38,29 +39,32 @@ CREATE TABLE conductor_conduce_bus (
 	fecha date NOT NULL
 );
 
-DROP TABLE IF EXISTS director;
+DROP TABLE IF EXISTS director CASCADE;
 CREATE TABLE director ( 
 	id varchar(20) NOT NULL
 );
 
-DROP TABLE IF EXISTS empleado;
+DROP TABLE IF EXISTS empleado CASCADE;
 CREATE TABLE empleado ( 
 	id varchar(20) NOT NULL,
-	tipo_id varchar(50),
+	tipo_id varchar(5),
 	fecha_ingreso date,
 	salario integer,
 	telefono varchar(20),
 	direccion varchar(50),
-	nombre varchar(50),
-	apellido varchar(50),
+	nombre varchar(15) NOT NULL,
+   nombre2 varchar(15),
+	apellido varchar(15) NOT NULL,
+   apellido2 varchar(15),
 	fecha_nacimiento date,
 	rol integer,
 	login varchar(10) NOT NULL,
 	password char(32) NOT NULL,
-	estado boolean NOT NULL
+	estado boolean NOT NULL,
+   email varchar(50)
 );
 
-DROP TABLE IF EXISTS estacion;
+DROP TABLE IF EXISTS estacion CASCADE;
 DROP SEQUENCE IF EXISTS estacion_id_seq; 
 
 CREATE SEQUENCE estacion_id_seq INCREMENT 1 START 1;
@@ -71,20 +75,20 @@ CREATE TABLE estacion (
 	estado boolean NOT NULL
 );
 
-DROP TABLE IF EXISTS estacion_paradero;
+DROP TABLE IF EXISTS estacion_paradero CASCADE;
 CREATE TABLE estacion_paradero ( 
 	id_estacion integer NOT NULL
 );
 
 
-DROP TABLE IF EXISTS estacion_principal;
+DROP TABLE IF EXISTS estacion_principal CASCADE;
 CREATE TABLE estacion_principal ( 
 	id_estacion integer NOT NULL,
 	nombre varchar(50),
 	id_operario varchar(20)
 );
 
-DROP TABLE IF EXISTS medida;
+DROP TABLE IF EXISTS medida CASCADE;
 DROP SEQUENCE IF EXISTS medida_id_seq; 
 
 CREATE SEQUENCE medida_id_seq INCREMENT 1 START 1;
@@ -94,20 +98,20 @@ CREATE TABLE medida (
 	accion varchar(200) NOT NULL
 );
 
-DROP TABLE IF EXISTS medida_reclamo_operario_agrega;
+DROP TABLE IF EXISTS medida_reclamo_operario_agrega CASCADE;
 CREATE TABLE medida_reclamo_operario_agrega ( 
 	id_operario varchar(50) NOT NULL,
 	ticket integer NOT NULL,
 	id_medida integer NOT NULL
 );
 
-DROP TABLE IF EXISTS operario;
+DROP TABLE IF EXISTS operario CASCADE;
 CREATE TABLE operario ( 
 	id varchar(20) NOT NULL,
 	id_jefe varchar(20)
 );
 
-DROP TABLE IF EXISTS recarga;
+DROP TABLE IF EXISTS recarga CASCADE;
 CREATE TABLE recarga ( 
 	pin varchar(30) NOT NULL,
 	id_estacion integer NOT NULL,
@@ -116,7 +120,7 @@ CREATE TABLE recarga (
 	valor integer NOT NULL
 );
 
-DROP TABLE IF EXISTS reclamo;
+DROP TABLE IF EXISTS reclamo CASCADE;
 DROP SEQUENCE IF EXISTS reclamo_ticket_seq; 
 
 CREATE SEQUENCE reclamo_ticket_seq INCREMENT 1 START 1;
@@ -129,27 +133,27 @@ CREATE TABLE reclamo (
 	estado varchar(10)
 );
 
-DROP TABLE IF EXISTS reclamo_auxiliar_usuario_realiza;
+DROP TABLE IF EXISTS reclamo_auxiliar_usuario_realiza CASCADE;
 CREATE TABLE reclamo_auxiliar_usuario_realiza ( 
 	id_auxiliar varchar(20) NOT NULL,
 	id_usuario varchar(20) NOT NULL,
 	ticket integer NOT NULL
 );
 
-DROP TABLE IF EXISTS ruta;
+DROP TABLE IF EXISTS ruta CASCADE;
 CREATE TABLE ruta ( 
 	nombre varchar(10) NOT NULL,
 	descripcion varchar(50),
 	estado boolean NOT NULL
 );
 
-DROP TABLE IF EXISTS ruta_formado_estacion;
+DROP TABLE IF EXISTS ruta_formado_estacion CASCADE;
 CREATE TABLE ruta_formado_estacion ( 
 	nombre varchar(10) NOT NULL,
 	id_estacion integer NOT NULL
 );
 
-DROP TABLE IF EXISTS tarjeta;
+DROP TABLE IF EXISTS tarjeta CASCADE;
 CREATE TABLE tarjeta ( 
 	pin varchar(30) NOT NULL,
 	saldo integer,
@@ -160,18 +164,18 @@ CREATE TABLE tarjeta (
 	estacion_venta integer
 );
 
-DROP TABLE IF EXISTS tarjeta_generica;
+DROP TABLE IF EXISTS tarjeta_generica CASCADE;
 CREATE TABLE tarjeta_generica ( 
 	pin varchar(30) NOT NULL
 );
 
-DROP TABLE IF EXISTS tarjeta_personalizada;
+DROP TABLE IF EXISTS tarjeta_personalizada CASCADE;
 CREATE TABLE tarjeta_personalizada ( 
 	pin varchar(30) NOT NULL,
 	credito integer
 );
 
-DROP TABLE IF EXISTS tarjeta_uso_ruta;
+DROP TABLE IF EXISTS tarjeta_uso_ruta CASCADE;
 CREATE TABLE tarjeta_uso_ruta ( 
 	nombre varchar(10) NOT NULL,
 	pin varchar(30) NOT NULL,
@@ -179,7 +183,7 @@ CREATE TABLE tarjeta_uso_ruta (
 	hora time NOT NULL
 );
 
-DROP TABLE IF EXISTS usuario;
+DROP TABLE IF EXISTS usuario CASCADE;
 CREATE TABLE usuario ( 
 	id varchar(20) NOT NULL,
 	tipo_id varchar(5),
