@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("1.1.2.2.1:1", "", "Controlador", "EARoot/EA1/EA1/EA2/EA2/EA1/EA36.htm", "175.png", "12", "0", "", "Logical diagram0","{9A445F79-E261-49f4-B6F2-5F1833CF41E3}");
+tocTab[tocTab.length] = new Array("1.1.2.2.1:2", "", "Authentication", "EARoot/EA1/EA1/EA2/EA2/EA1/EA38.htm", "5.png", "49", "0", "", "Class0","{500B1B59-46FD-4667-9F75-4A7283FE64E0}");
+tocTab[tocTab.length] = new Array("1.1.2.2.1:3", "", "BeanEmployee", "EARoot/EA1/EA1/EA2/EA2/EA1/EA39.htm", "5.png", "50", "0", "", "Class0","{69EDE734-34B9-45cb-B24C-A05EC53CF3CE}");
+tocTab[tocTab.length] = new Array("1.1.2.2.1:4", "", "EmployeeHolder", "EARoot/EA1/EA1/EA2/EA2/EA1/EA40.htm", "5.png", "48", "0", "", "Class0","{E721CEDC-E51D-4a5f-9EB6-C9F0F8028478}");
