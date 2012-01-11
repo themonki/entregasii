@@ -1,0 +1,3 @@
+tocTab[tocTab.length] = new Array("1.1.2.4:1", "", "Estaciones", "EARoot/EA1/EA1/EA2/EA4/EA63.htm", "175.png", "17", "0", "", "Logical diagram0","{F9E086B5-38DB-4725-A810-D1618E4D1BF4}");
+tocTab[tocTab.length] = new Array("1.1.2.4.1", "1", "Controlador", "EARoot/EA1/EA1/EA2/EA4/EA65.htm", "4.png", "", "", "{9A32456E-0F7A-42b3-B621-0275B7571DA0}", "Package");
+tocTab[tocTab.length] = new Array("1.1.2.4.2", "1", "DAO", "EARoot/EA1/EA1/EA2/EA4/EA66.htm", "4.png", "", "", "{6C0884E8-CBCC-4c20-B273-67EE661BEE4B}", "Package");
