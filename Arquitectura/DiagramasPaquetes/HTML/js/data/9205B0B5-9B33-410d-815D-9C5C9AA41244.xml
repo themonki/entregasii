@@ -1,0 +1,6 @@
+tocTab[tocTab.length] = new Array("1.1:1", "", "SIGETI", "EARoot/EA1/EA1/EA5.htm", "175.png", "30", "0", "", "Logical diagram0","{1C302422-0C69-406e-AF62-8936847C8942}");
+tocTab[tocTab.length] = new Array("1.1.1", "1", "Controlador", "EARoot/EA1/EA1/EA7.htm", "4.png", "", "", "{69F03162-B8DA-40b1-9B24-266E9EBFEA3F}", "Package");
+tocTab[tocTab.length] = new Array("1.1.2", "1", "DAO", "EARoot/EA1/EA1/EA8.htm", "4.png", "", "", "{0BC3EFB5-589E-41c0-9D29-7F1E6436AA40}", "Package");
+tocTab[tocTab.length] = new Array("1.1.3", "1", "Entidades", "EARoot/EA1/EA1/EA9.htm", "4.png", "", "", "{1A8C2655-4AC2-4741-81EC-730CD629B90F}", "Package");
+tocTab[tocTab.length] = new Array("1.1.4", "1", "web", "EARoot/EA1/EA1/EA10.htm", "4.png", "", "", "{09DED192-14EA-47a2-9800-63F9CD2828C8}", "Package");
+tocTab[tocTab.length] = new Array("1.1.5", "1", "Utilidades", "EARoot/EA1/EA1/EA11.htm", "4.png", "", "", "{35BBD033-1962-475d-A31E-1BFFDC5AC204}", "Package");
