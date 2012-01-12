@@ -1,1 +1,9 @@
-tocTab[tocTab.length] = new Array("1.1.2.1.1:1", "", "Controlador", "EARoot/EA1/EA1/EA2/EA1/EA1/EA27.htm", "175.png", "22", "0", "", "Logical diagram0","{35EC9077-E330-4dbf-8444-FC590ED44D9F}");
+tocTab[tocTab.length] = new Array("1.1.1:1", "", "Controlador", "EARoot/EA1/EA1/EA1/EA12.htm", "175.png", "22", "0", "", "Logical diagram0","{35EC9077-E330-4dbf-8444-FC590ED44D9F}");
+tocTab[tocTab.length] = new Array("1.1.1:2", "", "Authentication", "EARoot/EA1/EA1/EA1/EA14.htm", "5.png", "49", "0", "", "Class0","{500B1B59-46FD-4667-9F75-4A7283FE64E0}");
+tocTab[tocTab.length] = new Array("1.1.1:3", "", "BeanEmployee", "EARoot/EA1/EA1/EA1/EA15.htm", "5.png", "50", "0", "", "Class0","{69EDE734-34B9-45cb-B24C-A05EC53CF3CE}");
+tocTab[tocTab.length] = new Array("1.1.1:4", "", "ControladorBuses", "EARoot/EA1/EA1/EA1/EA16.htm", "5.png", "75", "0", "", "Class0","{F31F7B89-2884-4396-AC5D-EBB5504941EE}");
+tocTab[tocTab.length] = new Array("1.1.1:5", "", "ControladorEstaciones", "EARoot/EA1/EA1/EA1/EA17.htm", "5.png", "77", "0", "", "Class0","{5783D553-4657-4e91-83C0-07CED7F37365}");
+tocTab[tocTab.length] = new Array("1.1.1:6", "", "ControladorRutas", "EARoot/EA1/EA1/EA1/EA18.htm", "5.png", "76", "0", "", "Class0","{237747A0-A654-4705-BA71-EF3CCAB40465}");
+tocTab[tocTab.length] = new Array("1.1.1:7", "", "ControladorTargetas", "EARoot/EA1/EA1/EA1/EA19.htm", "5.png", "79", "0", "", "Class0","{57FBB9C9-87D8-4c9b-AD59-F9ECB8A947F0}");
+tocTab[tocTab.length] = new Array("1.1.1:8", "", "ControladorUsuarios", "EARoot/EA1/EA1/EA1/EA20.htm", "5.png", "78", "0", "", "Class0","{FEB01F7E-C361-4a6e-B0FB-6854D3C0476A}");
+tocTab[tocTab.length] = new Array("1.1.1:9", "", "EmployeeHolder", "EARoot/EA1/EA1/EA1/EA21.htm", "5.png", "48", "0", "", "Class0","{E721CEDC-E51D-4a5f-9EB6-C9F0F8028478}");

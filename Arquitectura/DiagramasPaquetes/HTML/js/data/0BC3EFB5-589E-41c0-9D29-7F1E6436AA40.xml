@@ -1,2 +1,7 @@
-tocTab[tocTab.length] = new Array("1.1.2.1.2:1", "", "DAO", "EARoot/EA1/EA1/EA2/EA1/EA2/EA29.htm", "175.png", "26", "0", "", "Logical diagram0","{F1C85D9E-ECD2-42d9-9930-61650270B5BD}");
-tocTab[tocTab.length] = new Array("1.1.2.1.2:2", "", "DaoBuses", "EARoot/EA1/EA1/EA2/EA1/EA2/EA31.htm", "5.png", "71", "0", "", "Class0","{C5A02E43-2061-488a-B11E-84102502BEAC}");
+tocTab[tocTab.length] = new Array("1.1.2:1", "", "DAO", "EARoot/EA1/EA1/EA2/EA22.htm", "175.png", "26", "0", "", "Logical diagram0","{F1C85D9E-ECD2-42d9-9930-61650270B5BD}");
+tocTab[tocTab.length] = new Array("1.1.2:2", "", "DaoBuses", "EARoot/EA1/EA1/EA2/EA24.htm", "5.png", "71", "0", "", "Class0","{C5A02E43-2061-488a-B11E-84102502BEAC}");
+tocTab[tocTab.length] = new Array("1.1.2:3", "", "DaoEmpleado", "EARoot/EA1/EA1/EA2/EA25.htm", "5.png", "51", "0", "", "Class0","{8D8E6987-90CD-4bc2-8FF7-DB60BE548C40}");
+tocTab[tocTab.length] = new Array("1.1.2:4", "", "DaoEstaciones", "EARoot/EA1/EA1/EA2/EA26.htm", "5.png", "73", "0", "", "Class0","{6813C84F-47ED-4b7d-9497-C62F98DEEF22}");
+tocTab[tocTab.length] = new Array("1.1.2:5", "", "DaoRutas", "EARoot/EA1/EA1/EA2/EA27.htm", "5.png", "72", "0", "", "Class0","{B16809E2-219C-43dc-ABCD-028D80BF1C98}");
+tocTab[tocTab.length] = new Array("1.1.2:6", "", "DaoTargeta", "EARoot/EA1/EA1/EA2/EA28.htm", "5.png", "70", "0", "", "Class0","{C6A0FE92-3422-464d-9F71-626DA71275B7}");
+tocTab[tocTab.length] = new Array("1.1.2:7", "", "DaoUsuarios", "EARoot/EA1/EA1/EA2/EA29.htm", "5.png", "74", "0", "", "Class0","{DF975FA8-276C-4af7-844D-84906C02865C}");
