@@ -1,7 +1,0 @@
-tocTab[tocTab.length] = new Array("1:1", "", "Deployment", "EARoot/EA1/EA3.htm", "179.png", "7", "0", "", "Deployment diagram0","{8B9A279D-D63A-4737-B78D-2EFF2A8C6E4E}");
-tocTab[tocTab.length] = new Array("1:2", "", "Apache Tomcat", "EARoot/EA1/EA5.htm", "192.png", "111", "0", "", "ExecutionEnvironment0","{C45F4F95-ECA4-40a9-99ED-3CFAEF3C5E4B}");
-tocTab[tocTab.length] = new Array("1:3", "", "DBMS", "EARoot/EA1/EA6.htm", "192.png", "112", "0", "", "ExecutionEnvironment0","{22C4BDB0-2073-4238-9F7C-7D5EB4BF90E8}");
-tocTab[tocTab.length] = new Array("1:4", "", "«browser» Navegador Web", "EARoot/EA1/EA7.htm", "9.png", "99", "0", "", "Node0","{5A802C91-C8A3-48df-ADBA-44BAFDFAA0ED}");
-tocTab[tocTab.length] = new Array("1:5", "", "«server» Servidor", "EARoot/EA1/EA8.htm", "9.png", "89", "0", "", "Node0","{70144B13-2F6B-494c-9BA4-86A6CEE5622E}");
-tocTab[tocTab.length] = new Array("1:6", "", "«JSF Page» SIGETI", "EARoot/EA1/EA9.htm", "82.png", "114", "89", "", "Artifact0","{12ABA8F8-AEB8-46c4-B255-A51F63D068B3}");
-tocTab[tocTab.length] = new Array("1:7", "", "Postgres", "EARoot/EA1/EA10.htm", "82.png", "113", "112", "", "Artifact0","{A1BB60B3-0B96-47d0-8AA3-8F0F1A7D8CEA}");
