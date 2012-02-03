@@ -11,32 +11,15 @@ CREATE TABLE bus (
 	tipo varchar(50),
 	capacidad integer,
 	id_interno varchar(20) NOT NULL,
-	estado boolean NOT NULL
+	estado boolean NOT NULL,
+   pertenece_ruta varchar(10)
 );
-
-DROP TABLE IF EXISTS bus_asignado_ruta CASCADE;
-CREATE TABLE bus_asignado_ruta ( 
-	nombre_ruta varchar(10) NOT NULL,
-	matricula varchar(10) NOT NULL,
-	hora time NOT NULL,
-	fecha date NOT NULL
-);
-
 
 DROP TABLE IF EXISTS conductor CASCADE;
 CREATE TABLE conductor ( 
 	id varchar(20) NOT NULL,
-   licencia varchar(20)
-);
-
-
-DROP TABLE IF EXISTS conductor_conduce_bus CASCADE;
-CREATE TABLE conductor_conduce_bus ( 
-	id varchar(50) NOT NULL,
-	matricula varchar(10) NOT NULL,
-	hora_inicio time NOT NULL,
-	hora_fin time,
-	fecha date NOT NULL
+   licencia varchar(20),
+   conduce_bus varchar(10)
 );
 
 DROP TABLE IF EXISTS director CASCADE;
@@ -48,7 +31,6 @@ DROP TABLE IF EXISTS empleado CASCADE;
 CREATE TABLE empleado ( 
 	id varchar(20) NOT NULL,
 	tipo_id varchar(5),
-	fecha_ingreso date,
 	salario integer,
 	telefono varchar(20),
 	direccion varchar(50),
@@ -57,11 +39,13 @@ CREATE TABLE empleado (
 	apellido varchar(15) NOT NULL,
    apellido2 varchar(15),
 	fecha_nacimiento date,
+   fecha_ingreso date,
 	rol integer,
+   email varchar(50),
 	login varchar(10) NOT NULL,
 	password char(32) NOT NULL,
 	estado boolean NOT NULL,
-   email varchar(50)
+   
 );
 
 DROP TABLE IF EXISTS estacion CASCADE;
@@ -79,7 +63,6 @@ DROP TABLE IF EXISTS estacion_paradero CASCADE;
 CREATE TABLE estacion_paradero ( 
 	id_estacion integer NOT NULL
 );
-
 
 DROP TABLE IF EXISTS estacion_principal CASCADE;
 CREATE TABLE estacion_principal ( 
@@ -205,14 +188,8 @@ ALTER TABLE auxiliar ADD CONSTRAINT PK_auxiliar
 ALTER TABLE bus ADD CONSTRAINT PK_bus 
 	PRIMARY KEY (matricula);
 
-ALTER TABLE bus_asignado_ruta ADD CONSTRAINT PK_bus_asignado_ruta 
-	PRIMARY KEY (nombre_ruta, matricula, hora, fecha);
-
 ALTER TABLE conductor ADD CONSTRAINT PK_conductor 
 	PRIMARY KEY (id);
-
-ALTER TABLE conductor_conduce_bus ADD CONSTRAINT PK_conductor_conduce_bus 
-	PRIMARY KEY (id, matricula, hora_inicio, fecha);
 
 ALTER TABLE director ADD CONSTRAINT PK_director 
 	PRIMARY KEY (id);
@@ -268,6 +245,7 @@ ALTER TABLE tarjeta_uso_ruta ADD CONSTRAINT PK_tarjeta_uso_ruta
 ALTER TABLE usuario ADD CONSTRAINT PK_usuario 
 	PRIMARY KEY (id);
 --------------------------------------------------------------------------
+--Auxiliar
 
 ALTER TABLE auxiliar
 	ADD CONSTRAINT UQ_auxiliar_id UNIQUE (id);
@@ -285,6 +263,7 @@ ALTER TABLE auxiliar ADD CONSTRAINT FK_auxiliar_operario
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+--Bus
 
 ALTER TABLE bus
 	ADD CONSTRAINT UQ_bus_id_interno UNIQUE (id_interno);
@@ -292,17 +271,12 @@ ALTER TABLE bus
 ALTER TABLE bus
 	ADD CONSTRAINT UQ_bus_matricula UNIQUE (matricula);
 
---
-
-ALTER TABLE bus_asignado_ruta ADD CONSTRAINT FK_bus_asignado_ruta_bus 
-	FOREIGN KEY (matricula) REFERENCES bus (matricula) 
-ON DELETE CASCADE ON UPDATE CASCADE;
-
-ALTER TABLE bus_asignado_ruta ADD CONSTRAINT FK_bus_asignado_ruta_ruta 
-	FOREIGN KEY (nombre_ruta) REFERENCES ruta (nombre) 
+ALTER TABLE bus ADD CONSTRAINT FK_bus_ruta 
+   FOREIGN KEY (pertenece_ruta) REFERENCES ruta (nombre) 
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+--Conductor
 
 ALTER TABLE conductor
 	ADD CONSTRAINT UQ_conductor_id UNIQUE (id);
@@ -311,17 +285,12 @@ ALTER TABLE conductor ADD CONSTRAINT FK_conductor_empleado
 	FOREIGN KEY (id) REFERENCES empleado (id)
 ON DELETE CASCADE ON UPDATE CASCADE;
 
---
-
-ALTER TABLE conductor_conduce_bus ADD CONSTRAINT FK_conductor_conduce_bus_bus 
-	FOREIGN KEY (matricula) REFERENCES bus (matricula)
-ON DELETE CASCADE ON UPDATE CASCADE;
-
-ALTER TABLE conductor_conduce_bus ADD CONSTRAINT FK_conductor_conduce_bus_conductor 
-	FOREIGN KEY (id) REFERENCES conductor (id)
+ALTER TABLE conductor ADD CONSTRAINT FK_conductor_bus 
+   FOREIGN KEY (conduce_bus) REFERENCES bus (matricula) 
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+--Director
 
 ALTER TABLE director
 	ADD CONSTRAINT UQ_director_id UNIQUE (id);
@@ -331,6 +300,7 @@ ALTER TABLE director ADD CONSTRAINT FK_director_empleado
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+--Empleado
 
 ALTER TABLE empleado
 	ADD CONSTRAINT UQ_empleado_id UNIQUE (id);
@@ -339,6 +309,7 @@ ALTER TABLE empleado
 	ADD CONSTRAINT UQ_empleado_login UNIQUE (login);
 
 --
+--Estacion
 
 ALTER TABLE estacion
 	ADD CONSTRAINT UQ_estacion_id UNIQUE (id);
@@ -347,6 +318,7 @@ ALTER TABLE estacion
 	ADD CONSTRAINT UQ_estacion_ubicacion UNIQUE (ubicacion);
 
 --
+--Estacion Paradero
 
 ALTER TABLE estacion_paradero
 	ADD CONSTRAINT UQ_estacion_paradero_id_estacion UNIQUE (id_estacion);
@@ -356,6 +328,7 @@ ALTER TABLE estacion_paradero ADD CONSTRAINT FK_estacion_paradero_estacion
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+--Estacion Principal
 
 ALTER TABLE estacion_principal
 	ADD CONSTRAINT UQ_estacion_principal_id_estacion UNIQUE (id_estacion);
@@ -364,7 +337,11 @@ ALTER TABLE estacion_principal ADD CONSTRAINT FK_estacion_principal_estacion
 	FOREIGN KEY (id_estacion) REFERENCES estacion (id) 
 ON DELETE CASCADE ON UPDATE CASCADE;
 
+ALTER TABLE estacion_principal ADD CONSTRAINT FK_etacionprincipal_operario 
+   FOREIGN KEY (id_operario) REFERENCES operario (id);
+
 --
+-- Medida
 
 ALTER TABLE medida
 	ADD CONSTRAINT UQ_medida_accion UNIQUE (accion);
@@ -373,6 +350,7 @@ ALTER TABLE medida
 	ADD CONSTRAINT UQ_medida_id UNIQUE (id);
 
 --
+-- Medida Operario Reclamo Agrega
 
 ALTER TABLE medida_reclamo_operario_agrega ADD CONSTRAINT FK_medida_reclamo_operario_agrega_operario 
 	FOREIGN KEY (id_operario) REFERENCES operario (id)
@@ -387,6 +365,7 @@ ALTER TABLE medida_reclamo_operario_agrega ADD CONSTRAINT FK_medida_reclamo_oper
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+--Operario
 
 ALTER TABLE operario
 	ADD CONSTRAINT UQ_operario_id UNIQUE (id);
@@ -400,6 +379,7 @@ ALTER TABLE operario ADD CONSTRAINT FK_operario_director
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+--Recarga
 
 ALTER TABLE recarga ADD CONSTRAINT FK_recarga_tarjeta
 	FOREIGN KEY (pin) REFERENCES tarjeta (pin)
@@ -410,11 +390,13 @@ ALTER TABLE recarga ADD CONSTRAINT FK_recarga_estacion_principal
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+--Reclamo
 
 ALTER TABLE reclamo
 	ADD CONSTRAINT UQ_reclamo_ticket UNIQUE (ticket);
 
 --
+--Reclamo Auxiliar Usuario Realiza
 
 ALTER TABLE reclamo_auxiliar_usuario_realiza
 	ADD CONSTRAINT UQ_reclamo_auxiliar_usuario_realiza_ticket UNIQUE (ticket);
@@ -432,11 +414,13 @@ ALTER TABLE reclamo_auxiliar_usuario_realiza ADD CONSTRAINT FK_reclamo_auxiliar_
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+--Ruta
 
 ALTER TABLE ruta
 	ADD CONSTRAINT UQ_ruta_nombre UNIQUE (nombre);
 
 --
+--Ruta Formado Estacion
 
 ALTER TABLE ruta_formado_estacion ADD CONSTRAINT FK_ruta_formado_estacion_ruta 
 	FOREIGN KEY (nombre) REFERENCES ruta (nombre) 
@@ -447,6 +431,7 @@ ALTER TABLE ruta_formado_estacion ADD CONSTRAINT FK_ruta_formado_estacion_estaci
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+--Tarjeta
 
 ALTER TABLE tarjeta
 	ADD CONSTRAINT UQ_tarjeta_pin UNIQUE (pin);
@@ -455,6 +440,7 @@ ALTER TABLE tarjeta ADD CONSTRAINT FK_tarjeta_estacion_principal
 	FOREIGN KEY (estacion_venta) REFERENCES estacion_principal (id_estacion);
 
 --
+--Tarjeta Generica
 
 ALTER TABLE tarjeta_generica
 	ADD CONSTRAINT UQ_tarjeta_generica_pin UNIQUE (pin);
@@ -464,7 +450,7 @@ ALTER TABLE tarjeta_generica ADD CONSTRAINT FK_tarjeta_generica_tarjeta
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
-
+--Tarjeta Personalizada
 ALTER TABLE tarjeta_personalizada
 	ADD CONSTRAINT UQ_tarjeta_personalizada_pin UNIQUE (pin);
 
@@ -473,6 +459,7 @@ ALTER TABLE tarjeta_personalizada ADD CONSTRAINT FK_tarjeta_personalizada_tarjet
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+--Tarjeta Uso Ruta
 
 ALTER TABLE tarjeta_uso_ruta ADD CONSTRAINT FK_tarjeta_uso_ruta_ruta 
 	FOREIGN KEY (nombre) REFERENCES ruta (nombre)
@@ -483,6 +470,7 @@ ALTER TABLE tarjeta_uso_ruta ADD CONSTRAINT FK_tarjeta_uso_ruta_tarjeta
 ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+--Usuario
 
 ALTER TABLE usuario
 	ADD CONSTRAINT UQ_usuario_adquiere_tarjeta UNIQUE (adquiere_tarjeta);
