@@ -44,7 +44,7 @@ CREATE TABLE empleado (
    email varchar(50),
 	login varchar(10) NOT NULL,
 	password char(32) NOT NULL,
-	estado boolean NOT NULL,
+	estado boolean NOT NULL
    
 );
 
