@@ -12,7 +12,8 @@ CREATE TABLE bus (
 	capacidad integer,
 	id_interno varchar(20) NOT NULL,
 	estado boolean NOT NULL,
-   pertenece_ruta varchar(10)
+	pertenece_ruta varchar(10),
+	estado_fisico VARCHAR(20)
 );
 
 DROP TABLE IF EXISTS conductor CASCADE;
@@ -44,8 +45,7 @@ CREATE TABLE empleado (
    email varchar(50),
 	login varchar(10) NOT NULL,
 	password char(32) NOT NULL,
-	estado boolean NOT NULL,
-   
+	estado boolean NOT NULL   
 );
 
 DROP TABLE IF EXISTS estacion CASCADE;
