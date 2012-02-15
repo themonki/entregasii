@@ -45,7 +45,8 @@ CREATE TABLE empleado (
    email varchar(50),
 	login varchar(10) NOT NULL,
 	password char(32) NOT NULL,
-	estado boolean NOT NULL   
+	estado boolean NOT NULL  
+
 );
 
 DROP TABLE IF EXISTS estacion CASCADE;
@@ -55,7 +56,7 @@ CREATE SEQUENCE estacion_id_seq INCREMENT 1 START 1;
 
 CREATE TABLE estacion ( 
 	id integer DEFAULT NEXTVAL('estacion_id_seq'::TEXT) NOT NULL,
-	ubicacion varchar(100) NOT NULL,
+	ubicacion varchar(20) NOT NULL,
 	estado boolean NOT NULL
 );
 
@@ -113,20 +114,15 @@ CREATE TABLE reclamo (
 	fecha date,
 	descripcion varchar(200),
 	motivo varchar(50),
-	estado varchar(10)
-);
-
-DROP TABLE IF EXISTS reclamo_auxiliar_usuario_realiza CASCADE;
-CREATE TABLE reclamo_auxiliar_usuario_realiza ( 
-	id_auxiliar varchar(20) NOT NULL,
-	id_usuario varchar(20) NOT NULL,
-	ticket integer NOT NULL
+	estado varchar(10),
+	auxiliar_recibe varchar(20),
+	usuario_realiza varchar(20)
 );
 
 DROP TABLE IF EXISTS ruta CASCADE;
 CREATE TABLE ruta ( 
 	nombre varchar(10) NOT NULL,
-	descripcion varchar(50),
+	descripcion varchar(350),
 	estado boolean NOT NULL
 );
 
@@ -220,9 +216,6 @@ ALTER TABLE recarga ADD CONSTRAINT PK_recarga
 
 ALTER TABLE reclamo ADD CONSTRAINT PK_reclamo 
 	PRIMARY KEY (ticket);
-
-ALTER TABLE reclamo_auxiliar_usuario_realiza ADD CONSTRAINT PK_reclamo_auxiliar_usuario_realiza 
-	PRIMARY KEY (id_auxiliar, id_usuario, ticket);
 
 ALTER TABLE ruta ADD CONSTRAINT PK_ruta 
 	PRIMARY KEY (nombre);
@@ -395,24 +388,11 @@ ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE reclamo
 	ADD CONSTRAINT UQ_reclamo_ticket UNIQUE (ticket);
 
---
---Reclamo Auxiliar Usuario Realiza
+ALTER TABLE reclamo ADD CONSTRAINT FK_reclamo_usuario 
+	FOREIGN KEY (usuario_realiza) REFERENCES usuario (id);
 
-ALTER TABLE reclamo_auxiliar_usuario_realiza
-	ADD CONSTRAINT UQ_reclamo_auxiliar_usuario_realiza_ticket UNIQUE (ticket);
-
-ALTER TABLE reclamo_auxiliar_usuario_realiza ADD CONSTRAINT FK_reclamo_auxiliar_usuario_realiza_usuario 
-	FOREIGN KEY (id_usuario) REFERENCES usuario (id)
-ON DELETE CASCADE ON UPDATE CASCADE;
-
-ALTER TABLE reclamo_auxiliar_usuario_realiza ADD CONSTRAINT FK_reclamo_auxiliar_usuario_realiza_reclamo 
-	FOREIGN KEY (ticket) REFERENCES reclamo (ticket)
-ON DELETE CASCADE ON UPDATE CASCADE;
-
-ALTER TABLE reclamo_auxiliar_usuario_realiza ADD CONSTRAINT FK_reclamo_auxiliar_usuario_realiza_auxiliar 
-	FOREIGN KEY (id_auxiliar) REFERENCES auxiliar (id)
-ON DELETE CASCADE ON UPDATE CASCADE;
-
+ALTER TABLE reclamo ADD CONSTRAINT FK_reclamo_auxiliar 
+	FOREIGN KEY (auxiliar_recibe) REFERENCES auxiliar (id);
 --
 --Ruta
 
